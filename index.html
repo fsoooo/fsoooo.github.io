@@ -1,293 +1,448 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>天眼互联-科技让保险无限可能</title>
-		<link rel="stylesheet" href="css/lib/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/lib/iconfont.css" />
-		<link rel="stylesheet" href="css/common_backend.css" />
-		<link rel="stylesheet" href="css/index.css" />
-	</head>
-	<body>
-		<div class="header">
-			<div class="logo-wrapper">
-				<img src="img/logo.png" alt="" />
-			</div>
-			<div class="nav-top-wrapper">
-				<ul>
-					<li class="active"><a href="index.html">业务统计</a></li>
-					<li><a href="html/index/index_businessRemind.html">业务提醒</a></li>
-					<li><a href="html/index/index_client.html">客户管理</a></li>
-					<li><a href="html/index/index_comment.html">客户评论</a></li>
-				</ul>
-			</div>
-			<div class="user-wrapper">
-				<span class="user-name">田小田</span>
-				<button class="btn btn-default">退出</button>
-			</div>
-		</div>
-		<div class="menu-wrapper">
-			<ul>
-				<li class="active"><a href="index.html"><i class="iconfont icon-shouye"></i>首页</a></li>
-				<li><a href="agent.html"><i class="iconfont icon-dailiren"></i>代理人</a></li>
-				<li><a href="client.html"><i class="iconfont icon-kehu"></i>客户管理</a></li>
-				<li><a href="product.html"><i class="iconfont icon-chanpin"></i>产品管理</a></li>
-				<li><a href="activity.html"><i class="iconfont icon-xing"></i>任务管理</a></li>
-				<li><a href="channel.html"><i class="iconfont icon-qudao"></i>渠道管理</a></li>
-				<li><a href="brokerage.html"><i class="iconfont icon-yongjin"></i>佣金管理</a></li>
-			</ul>
-		</div>
-		<div class="main-wrapper">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="chart-wrapper">
-						<div>
-							<span class="btn-select active">年</span>
-							<span class="btn-select">月</span>
-							<span class="btn-select">周</span>
-							<select class="form-control fr">
-								<option>2017年</option>
-								<option>2016年</option>
-								<option>2015年</option>
-								<option>2014年</option>
-								<option>2013年</option>
-							</select>
-						</div>
-						<div id="main1" style="width: 100%;height:240px;"></div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="info-wrapper">
-						<h2 class="title">佣金</h2>
-						<div class="info-item">
-							<div class="name">昨日</div>
-							<div>￥<span class="price">450</span></div>
-						</div>
-						<div class="info-item">
-							<div class="name">总共</div>
-							<div style="color: #ffae00;">￥<span class="price">5000</span></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-5">
-					<div class="chart-wrapper">
-						<div>
-							<span class="btn-select">年</span>
-							<span class="btn-select">月</span>
-							<span class="btn-select active">周</span>
-						</div>
-						<div id="main2" style="width: 100%;height:240px;"></div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-5">
-					<div class="chart-wrapper">
-						<div>
-							<span class="btn-select">年</span>
-							<span class="btn-select active">月</span>
-							<span class="btn-select">周</span>
-							<select class="form-control fr">
-								<option>7月</option>
-								<option>8月</option>
-								<option>9月</option>
-								<option>10月</option>
-								<option>11月</option>
-							</select>
-						</div>
-						<div id="main3" style="width: 100%;height:240px;"></div>
-					</div>
-				</div>
-				<div class="col-md-5">
-					<div class="chart-wrapper">
-						<div>
-							<span class="btn-select active">年</span>
-							<span class="btn-select">月</span>
-							<span class="btn-select">周</span>
-							<select class="form-control fr">
-								<option>2017年</option>
-								<option>2016年</option>
-								<option>2015年</option>
-								<option>2014年</option>
-								<option>2013年</option>
-							</select>
-						</div>
-						<div id="main4" style="width: 100%;height:240px;"></div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="info-wrapper">
-						<h2 class="title">客户</h2>
-						<div class="info-item">
-							<div class="name">昨日</div>
-							<div><span class="price">4</span></div>
-						</div>
-						<div class="info-item">
-							<div class="name">总共</div>
-							<div style="color: #ee1b59;"><span class="price">40</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script src="js/lib/jquery-1.11.3.min.js"></script>
-		<script src="js/lib/echarts.js"></script>
-		<script src="js/lib/bootstrap.min.js"></script>
-		<script src="js/common_backend.js"></script>
-		<script type="text/javascript">
-			changeTab('.btn-select');
-			var data1 = {
-				selected: {
-					'标准保费': false,
-					'累计佣金': false,
-				},
-				xDatas: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-				data : ['累计保费','标准保费','累计佣金'],
-				yDatas : [
-					[120, 132, 101, 134, 90, 230, 210, 132, 232, 134, 90, 200],
-					[220, 182, 191, 234, 290, 330, 310, 132, 191, 134, 90, 150],
-					[150, 232, 201, 154, 190, 330, 410, 132, 101, 134, 220, 178]
-				]
-			}
-			var data2 = {
-				selected: {
-					'标准保费': false,
-					'累计佣金': false,
-				},
-				xDatas: ['一', '二', '三', '四', '五', '六', '日'],
-				data : ['累计保费','标准保费','累计佣金'],
-				yDatas : [
-					[120, 132, 101, 134, 90, 230, 210],
-					[220, 182, 191, 234, 290, 330, 310],
-					[150, 232, 201, 154, 190, 330, 410]
-				]
-			}
-			var data3 = {
-				selected: {
-					'标准保费': false,
-					'累计佣金': false,
-				},
-				xDatas: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
-				data : ['累计保费','标准保费','累计佣金'],
-				yDatas : [
-					[120, 132, 101, 134, 90, 230, 210, 132, 101, 134, 90, 201, 154, 190, 210, 132, 101, 154, 190, 210, 132, 101, 234, 290, 90, 154, 190, 210, 132, 101],
-					[220, 182, 191, 234, 290, 330, 310, 191, 234, 290, 330, 154, 190, 210, 132, 101, 201, 154, 190, 210, 132, 210, 232, 330, 154, 190, 330, 410, 201, 154],
-					[150, 232, 201, 154, 190, 330, 410, 201, 154, 154, 190, 210, 132, 101, 190, 210, 132, 101, 210, 132, 101, 210, 134, 90, 201, 154, 190, 210, 132, 101]
-				]
-			}
-			var data4 = {
-				selected: {
-					'疾病险': false,
-					'医疗险': false,
-					'责任险': false,
-					'责任险1': false,
-					'责任险2': false,
-				},
-				xDatas: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-				data : ['意外险','疾病险','医疗险','责任险','责任险1','责任险2'],
-				yDatas : [
-					[120, 132, 101, 134, 90, 230, 210, 132, 101, 134, 101,80],
-					[220, 182, 191, 234, 290, 330, 310, 132, 101, 134, 90, 105],
-					[150, 210, 132, 101, 134, 90, 201, 154, 100, 134, 290, 230],
-					[120, 132, 101, 134, 90, 230, 210, 132, 101, 134, 90, 45],
-					[220, 310, 191, 234, 290, 330, 101, 134, 90, 134, 150, 177],
-					[150, 190, 210, 132, 101, 190, 210, 132, 101, 201, 201, 359]
-				]
-			}
-			
-			echartOptions(data1,'main1')
-			echartOptions(data2,'main2')
-			echartOptions(data3,'main3')
-			echartOptions(data4,'main4')
-			
-			
-			function echartOptions(obj,ele){
-				var color = ['#da4fdc','#63dc4f','#00a2ff','#faf722','#c61e57','#1aeddc'];
-				var data1 = obj.data;
-				var newData = [];
-				for(var i=0,l=data1.length;i<l;i++){
-					var dataobj = {};
-					dataobj.name = data1[i];
-					dataobj.icon = 'pin';
-					dataobj.textStyle= {};
-					dataobj.textStyle.color = color[i];
-					newData.push(dataobj);
-				}
-				var newYData = [];
-				var yDatas = obj.yDatas;
-				for(var i=0,l=yDatas.length;i<l;i++){
-					var dataobj = {};
-					dataobj.name = data1[i];
-					dataobj.stack = '总量'+i;
-					dataobj.type = 'line';
-					dataobj.smooth = true;
-					dataobj.data = yDatas[i];
-					newYData.push(dataobj);
-				}
-				var option = {
-					color: color,
-					tooltip: {
-						trigger: 'axis',
-						axisPointer: {
-							type: 'cross',
-							label: {
-								backgroundColor: '#6a7985'
-							}
-						}
-					},
-					legend: {
-						selected: obj.selected,
-						data: newData,
-						bottom: '0px',
-						left: '20px',
-						textStyle: {
-							fontSize: 10
-						}
-					},
-					grid: {
-						top: '6%',
-						left: '0%',
-						right: '4%',
-						bottom: '20%',
-						containLabel: true
-					},
-					xAxis: [{
-						type: 'category',
-						axisLabel: {
-					　  		textStyle: {
-					　　  			color: '#83879d'
-					　　		}
-						},
-						splitLine:{  
-	                        show:true,
-	                        lineStyle:{
-								color: '#2f365a',
-							}
-	                    },
-						boundaryGap: false,
-						data: obj.xDatas
-					}],
-					yAxis: [{
-						type: 'value',
-						axisLabel: {
-					　  		textStyle: {
-					　　  			color: '#00a2ff'
-					　　		}
-						},
-						splitLine:{  
-	                        lineStyle:{
-								color: '#2f365a',
-							}
-	                    },
-					}],
-					series: newYData
-				};
-				var myChart1 = echarts.init(document.getElementById(ele));
-				myChart1.setOption(option);
-				$(window).resize(function(){
-	                myChart1.resize();
-	            });  
-			}
-	</script>
-	</body>
-</html>
+<!-- saved from url=(0051)https://www.jianshu.com/users/910c6f95a495/timeline -->
+<html class=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+  <!-- Start of Baidu Transcode -->
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="mobile-agent" content="format=html5;url=https://www.jianshu.com/users/910c6f95a495/timeline">
+  <!-- End of Baidu Transcode -->
+
+    <meta name="description" content="内不欺己，外不欺人，上不欺天。君子所以慎独。">
+
+  <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+  <meta property="wb:webmaster" content="294ec9de89e7fadb">
+  <meta property="qc:admins" content="104102651453316562112116375">
+  <meta property="qc:admins" content="11635613706305617">
+  <meta property="qc:admins" content="1163561616621163056375">
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4">
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI">
+  <meta http-equiv="mobile-agent" content="format=html5; url=https://www.jianshu.com/users/910c6f95a495/timeline">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+  
+
+    <title>赵客缦胡缨v吴钩霜雪明 - 简书</title>
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Ye5PIHUWCB+Xrts61LXtoUT11Fax5Ecsz8QP29QU8LkrHAeNMX6DewNBFxnJhQ8PW6pZNsIRwHdhg6DRa7iYGQ==">
+
+  <link rel="stylesheet" media="all" href="./static/web-4d59548b691b7b5c11d8.css">
+  
+  <link rel="stylesheet" media="all" href="./static/entry-71aa880fd9d7cbb38465.css">
+
+  <link href="https://cdn2.jianshu.io/assets/favicons/favicon-e743bfb1821442341c3ab15bdbe804f7ad97676bd07a770ccc9483473aa76f06.ico" rel="shortcut icon" type="image/x-icon">
+      <link rel="apple-touch-icon-precomposed" href="https://cdn2.jianshu.io/assets/apple-touch-icons/57-a6f1f1ee62ace44f6dc2f6a08575abd3c3b163288881c78dd8d75247682a4b27.png" sizes="57x57">
+      <link rel="apple-touch-icon-precomposed" href="https://cdn2.jianshu.io/assets/apple-touch-icons/72-fb9834bcfce738fd7b9c5e31363e79443e09a81a8e931170b58bc815387c1562.png" sizes="72x72">
+      <link rel="apple-touch-icon-precomposed" href="https://cdn2.jianshu.io/assets/apple-touch-icons/76-49d88e539ff2489475d603994988d871219141ecaa0b1a7a9a1914f4fe3182d6.png" sizes="76x76">
+      <link rel="apple-touch-icon-precomposed" href="https://cdn2.jianshu.io/assets/apple-touch-icons/114-24252fe693524ed3a9d0905e49bff3cbd0228f25a320aa09053c2ebb4955de97.png" sizes="114x114">
+      <link rel="apple-touch-icon-precomposed" href="https://cdn2.jianshu.io/assets/apple-touch-icons/120-1bb7371f5e87f93ce780a5f1a05ff1b176828ee0d1d130e768575918a2e05834.png" sizes="120x120">
+      <link rel="apple-touch-icon-precomposed" href="https://cdn2.jianshu.io/assets/apple-touch-icons/152-bf209460fc1c17bfd3e2b84c8e758bc11ca3e570fd411c3bbd84149b97453b99.png" sizes="152x152">
+
+  <!-- Start of 访问统计 -->
+    <script src="./static/push.js.下载"></script><script src="./static/hm.js.下载"></script><script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><style>html, * {-webkit-user-select:text!important; -moz-user-select:text!important;}</style>
+
+  <!-- End of 访问统计 -->
+<style type="text/css">
+button[data-v-6292e408] {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+button *[data-v-6292e408] {
+    pointer-events: none;
+}
+button[data-v-6292e408]:focus {
+    outline-width: 0;
+}
+</style><style type="text/css">#htmlToothbrush, #bodyToothbrush {overflow:hidden !important;zoom:100% !important}
+#htmlToothbrush #bodyToothbrush .parentToothbrush {overflow:visible !important;z-index:auto !important;transform:none !important;-webkit-transform-style:flat !important;transition:none !important;contain:none !important;}
+#htmlToothbrush #bodyToothbrush .absoluteToothbrush {position:absolute !important;}
+#htmlToothbrush #bodyToothbrush .playerToothbrush {position:fixed !important;top:0px !important;left:1px !important;width:calc(100vw - 2px) !important;height:100vh !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;margin:0 !important;padding:0 !important;z-index:2147483647 !important;border:none !important;background-color:#000 !important;transform:none !important;}
+#htmlToothbrush #bodyToothbrush .playerToothbrush video {object-fit:contain !important;}
+#playerControlBtn {visibility:hidden;opacity:0;display:none;transition: all 0.5s ease;cursor: pointer;font: 12px "微软雅黑";margin:0;width:64px;height:20px;line-height:20px;border:none;text-align: center;position: fixed;z-index:2147483647;background-color: #27A9D8;color: #FFF;} #playerControlBtn:hover {visibility:visible;opacity:1;background-color:#2774D8;}
+#playerControlBtn.playerControlBtnCol {width:20px;height:64px;line-height:16px;}
+#leftFullStackButton{display:none;position:fixed;width:1px;height:100vh;top:0;left:0;z-index:2147483647;background:#000;}
+#rightFullStackButton{display:none;position:fixed;width:1px;height:100vh;top:0;right:0;z-index:2147483647;background:#000;}</style><style type="text/css">#htmlToothbrush #bodyToothbrush .node-video.node-full video,#htmlToothbrush #bodyToothbrush .WB_h5video video {width: inherit !important;height: inherit !important;}
+#htmlToothbrush #bodyToothbrush #douyu_room_normal_flash_proxy_box {position:fixed !important;top:0px !important;left:1px !important;width:calc(100vw - 2px) !important;height:100vh !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;margin:0 !important;padding:0 !important;z-index:2147483645 !important;border:none !important;background-color:#000 !important;transform:none !important;}</style><style>	#mpiv-bar { position:fixed;z-index:2147483647;left:0;right:0;top:0;transform:scaleY(0);-webkit-transform:scaleY(0);transform-origin:top;-webkit-transform-origin:top;transition:transform 500ms ease 1000ms;-webkit-transition:-webkit-transform 500ms ease 1000ms;text-align:center;font-family:sans-serif;font-size:15px;font-weight:bold;background:rgba(0, 0, 0, 0.6);color:white;padding:4px 10px; }	#mpiv-bar.mpiv-show { transform:scaleY(1);-webkit-transform:scaleY(1); }	#mpiv-popup.mpiv-show { display:inline; }	#mpiv-popup { display:none;border:1px solid gray;box-sizing:content-box;background-color:white;position:fixed;z-index:2147483647;margin:0;max-width:none;max-height:none;will-change:display,width,height,left,top;cursor:none; }	.mpiv-loading:not(.mpiv-preloading) * { cursor:wait!important; }	.mpiv-edge #mpiv-popup { cursor:default; }	.mpiv-error * { cursor:not-allowed!important; }	.mpiv-ready *, .mpiv-large * { cursor:zoom-in!important; cursor:-webkit-zoom-in!important; }	.mpiv-shift * { cursor:default!important; }</style></head>
+
+  <!-- 只给10%的用户添加代码 -->
+  <!-- ###第四范式-智能推荐：代码直接复制 无需修改参数### -->
+  <!-- ###功能：上报内容并反馈用户行为### -->
+  <!--
+  -->
+  <body lang="zh-CN" class="reader-black-font" style="overflow-y: scroll;">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="https://www.jianshu.com/"><img src="./static/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="Nav logo"></a>
+
+    <!-- 右上角 -->
+      <!-- 未登录显示登录/注册/写文章 -->
+      <a class="btn write-btn" target="_blank" href="https://www.jianshu.com/writer#/">
+        <i class="iconfont ic-write"></i>写文章
+</a>      <a class="btn sign-up" id="sign_up" href="https://www.jianshu.com/sign_up">注册</a>
+      <a class="btn log-in" id="sign_in" href="https://www.jianshu.com/sign_in">登录</a>
+
+    <!-- 如果用户登录，显示下拉菜单 -->
+
+    <div class="style-mode"><a class="style-mode-btn"><i class="iconfont ic-navigation-mode"></i></a> <div class="popover-modal" style="left: 0px; display: none;"><div class="meta"><i class="iconfont ic-navigation-night"></i><span>夜间模式</span></div> <div class="switch day-night-group"><a class="switch-btn">开</a> <a class="switch-btn active">关</a></div> <hr> <div class="switch font-family-group"><a class="switch-btn font-song">宋体</a> <a class="switch-btn font-hei active">黑体</a></div> <div class="switch"><a class="switch-btn active">简</a> <a class="switch-btn">繁</a></div></div></div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="tab ">
+              <a href="https://www.jianshu.com/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="tab ">
+              <a id="web-nav-app-download-btn" class="app-download-btn" href="https://www.jianshu.com/apps?utm_medium=desktop&amp;utm_source=navbar-apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="https://www.jianshu.com/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+              <input type="text" name="q" id="q" value="" autocomplete="off" placeholder="搜索" class="search-input">
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+
+<div class="container person">
+  <div class="row">
+    <div class="col-xs-16 main">
+      <div class="main-top">
+
+  <a class="avatar" href="https://www.jianshu.com/u/910c6f95a495">
+    <img src="./static/78e12266-f7a2-4ce4-8110-f74d71694add.jpg" alt="240">
+</a>
+    <button data-v-6292e408="" class="off  user-follow-button"><i data-v-6292e408="" class="iconfont"></i><span data-v-6292e408="">关注</span></button>
+    <a class="btn btn-hollow" href="https://www.jianshu.com/notifications#/chats/new?mail_to=6943526">发简信</a>
+
+  <div class="title">
+    <a class="name" href="https://www.jianshu.com/u/910c6f95a495">赵客缦胡缨v吴钩霜雪明</a>
+      <i class="iconfont ic-man"></i>
+  </div>
+  <div class="info">
+    <ul>
+      <li>
+        <div class="meta-block">
+          <a href="https://www.jianshu.com/users/910c6f95a495/following">
+            <p>88</p>
+            关注 <i class="iconfont ic-arrow"></i>
+</a>        </div>
+      </li>
+      <li>
+        <div class="meta-block">
+          <a href="https://www.jianshu.com/users/910c6f95a495/followers">
+            <p>101</p>
+            粉丝 <i class="iconfont ic-arrow"></i>
+</a>        </div>
+      </li>
+      <li>
+        <div class="meta-block">
+          <a href="https://www.jianshu.com/u/910c6f95a495">
+            <p>80</p>
+            文章 <i class="iconfont ic-arrow"></i>
+</a>        </div>
+      </li>
+      <li>
+        <div class="meta-block">
+          <p>108167</p>
+          <div>字数</div>
+        </div>
+      </li>
+      <li>
+        <div class="meta-block">
+          <p>483</p>
+          <div>收获喜欢</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      <div id="outer-container">
+        <ul class="trigger-menu" data-pjax-container="#list-container"><li class="active"><a href="https://www.jianshu.com/u/910c6f95a495?order_by=shared_at"><i class="iconfont ic-articles"></i> 文章</a></li><li class=""><a href="https://www.jianshu.com/users/910c6f95a495/timeline"><i class="iconfont ic-feed"></i> 动态</a></li><li class=""><a href="https://www.jianshu.com/u/910c6f95a495?order_by=commented_at"><i class="iconfont ic-latestcomments"></i> 最新评论</a></li><li class=""><a href="https://www.jianshu.com/u/910c6f95a495?order_by=top"><i class="iconfont ic-hot"></i> 热门</a></li></ul>
+
+        <div id="list-container"><!-- 文章列表模块 -->
+<ul class="note-list" infinite-scroll-url="/u/910c6f95a495?order_by=shared_at">
+    
+
+<li id="note-38575805" data-note-id="38575805" class="">
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/93cec6397e28">浏览器兼容性测试</a>
+    <p class="abstract">
+      浏览器相关兼容性测试时的测试要点： 测试Web页面在不同浏览器的界面是否一致:a)界面是否正常加载；b)界面的CSS样式是否显示完全；c)文字图...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/93cec6397e28">
+        <i class="iconfont ic-list-read"></i> 157
+</a>        <a target="_blank" href="https://www.jianshu.com/p/93cec6397e28#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 2</span>
+      <span class="time" data-shared-at="2018-12-19T16:44:51+08:00">昨天 16:44</span>
+    </div>
+  </div>
+</li>
+
+    
+
+<li id="note-38521097" data-note-id="38521097" class="">
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/f03b31ae97d4">小程序学习笔记-微信支付避坑指南</a>
+    <p class="abstract">
+      小程序接入微信支付避坑指南 微信支付的整体申请流程，一图以蔽之。 微信支付申请流程 容易掉坑的地方集中在「登记商户资料」—「平台审核资料」的环节...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/f03b31ae97d4">
+        <i class="iconfont ic-list-read"></i> 242
+</a>        <a target="_blank" href="https://www.jianshu.com/p/f03b31ae97d4#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 3</span>
+      <span class="time" data-shared-at="2018-12-18T17:07:45+08:00">前天 17:07</span>
+    </div>
+  </div>
+</li>
+
+    
+
+<li id="note-38470348" data-note-id="38470348" class="">
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/1ea4511ec35d">小程序学习笔记-避坑指南</a>
+    <p class="abstract">
+      一.设计注意事项 1.小程序类别的选择。 在开发之前，一定要检查小程序的分类是否能够通过审核。 所有在选择小程序的时候，第一步要了解清楚微信官方...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/1ea4511ec35d">
+        <i class="iconfont ic-list-read"></i> 308
+</a>        <a target="_blank" href="https://www.jianshu.com/p/1ea4511ec35d#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 4</span>
+      <span class="time" data-shared-at="2018-12-17T18:41:50+08:00">12.17 18:41</span>
+    </div>
+  </div>
+</li>
+
+    
+
+<li id="note-38468875" data-note-id="38468875" class="">
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/3a79956a0f8a">小程序学习笔记-上线须知</a>
+    <p class="abstract">
+      企业现在对小程序的重视程度都特别高，想通过小程序获得更多的用户和流量。那么企业就要了解小程序上线的步骤。只有保证小程序顺利上线，企业才能够通过小...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/3a79956a0f8a">
+        <i class="iconfont ic-list-read"></i> 294
+</a>        <a target="_blank" href="https://www.jianshu.com/p/3a79956a0f8a#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 4</span>
+      <span class="time" data-shared-at="2018-12-17T18:03:05+08:00">12.17 18:03</span>
+    </div>
+  </div>
+</li>
+
+    
+
+<li id="note-38259804" data-note-id="38259804" class="">
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/9f9d27449772">小程序学习笔记-视图层</a>
+    <p class="abstract">
+      视图层 视图层有wxml何wxss组成将逻辑层的数据反应成视图，同时将视图层的事件发送给逻辑层。 wxml :WXML（WeiXin Marku...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/9f9d27449772">
+        <i class="iconfont ic-list-read"></i> 335
+</a>        <a target="_blank" href="https://www.jianshu.com/p/9f9d27449772#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 8</span>
+      <span class="time" data-shared-at="2018-12-13T18:46:35+08:00">12.13 18:46</span>
+    </div>
+  </div>
+</li>
+
+    
+
+<li id="note-38259381" data-note-id="38259381" class="">
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/0dcf05259218">小程序学习笔记-文件结构</a>
+    <p class="abstract">
+      项目文件 app.js 小程序的脚本代码，监听处理小程序的生命周期函数、申明全局变量、调用框架提供的API等等App();函数注册一个小程序on...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/0dcf05259218">
+        <i class="iconfont ic-list-read"></i> 223
+</a>        <a target="_blank" href="https://www.jianshu.com/p/0dcf05259218#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 6</span>
+      <span class="time" data-shared-at="2018-12-13T18:37:13+08:00">12.13 18:37</span>
+    </div>
+  </div>
+</li>
+
+    
+
+<li id="note-38147720" data-note-id="38147720" class="">
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/a0c6ccc38fdb">小程序学习笔记-开发须知</a>
+    <p class="abstract">
+      一、小程序开发须知 App() 必须在 app.js 中注册，且不能注册多个。 编译后的代码包大小需小于 1MB，否则代码包将上传失败。 每个页...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/a0c6ccc38fdb">
+        <i class="iconfont ic-list-read"></i> 387
+</a>        <a target="_blank" href="https://www.jianshu.com/p/a0c6ccc38fdb#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 5</span>
+      <span class="time" data-shared-at="2018-12-11T16:51:56+08:00">12.11 16:51</span>
+    </div>
+  </div>
+</li>
+
+    
+
+<li id="note-38135806" data-note-id="38135806" class="have-img">
+    <a class="wrap-img" href="https://www.jianshu.com/p/8f47312e49d4" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/6943526-c808126bb07de165.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" class="img-blur" src="./static/6943526-c808126bb07de165.png" alt="120">
+    </a>
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/8f47312e49d4">小程序学习笔记-引入第三方UI</a>
+    <p class="abstract">
+      小程序使用npm引入第三方UI，经常出现错误，没有node_modules,导致无法引入第三方UI等 正确操作应该是： 先新建一个小程序项目，初...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/8f47312e49d4">
+        <i class="iconfont ic-list-read"></i> 403
+</a>        <a target="_blank" href="https://www.jianshu.com/p/8f47312e49d4#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 6</span>
+      <span class="time" data-shared-at="2018-12-11T13:51:04+08:00">12.11 13:51</span>
+    </div>
+  </div>
+</li>
+
+    
+
+<li id="note-37945324" data-note-id="37945324" class="have-img">
+    <a class="wrap-img" href="https://www.jianshu.com/p/8fb15b56278a" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/6943526-0ec0f3483baf83f5.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" class="img-blur" src="./static/6943526-0ec0f3483baf83f5.png" alt="120">
+    </a>
+  <div class="content">
+    <a class="title" target="_blank" href="https://www.jianshu.com/p/8fb15b56278a">《水性江南》</a>
+    <p class="abstract">
+      今天偶然间想起了上初中时背的一篇语文阅读理解文章《水性江南》。上网找了一下，发现百度词条都是问阅读理解答案的。犹记得，上学时语文老师对这篇文章非...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="https://www.jianshu.com/p/8fb15b56278a">
+        <i class="iconfont ic-list-read"></i> 285
+</a>        <a target="_blank" href="https://www.jianshu.com/p/8fb15b56278a#comments">
+          <i class="iconfont ic-list-comments"></i> 2
+</a>      <span><i class="iconfont ic-list-like"></i> 6</span>
+      <span class="time" data-shared-at="2018-12-07T16:31:10+08:00">12.07 16:31</span>
+    </div>
+  </div>
+</li>
+
+</ul>
+</div>
+      </div>
+    </div>
+    
+<div class="col-xs-7 col-xs-offset-1 aside">
+      <div class="title">个人介绍</div>
+  <div class="description">
+    <div class="js-intro">内不欺己，外不欺人，上不欺天。君子所以慎独。</div>
+    <a class="social-icon-sprite social-icon-index" target="_blank" href="https://github.com/fsoooo"></a><a class="social-icon-sprite social-icon-weibo" target="_blank" href="http://weibo.com/u/5709982799"></a><a class="social-icon-sprite social-icon-douban" target="_blank" href="http://www.douban.com/people/165168986"></a><a class="social-icon-sprite social-icon-google_plus" target="_blank" href="https://plus.google.com/106514869141983972675"></a>
+    <a class="social-icon-sprite social-icon-weixin" data-toggle="popover" data-placement="bottom" data-html="true" data-trigger="hover" href="javascript:void(0);" data-content="
+  &lt;div class=&quot;qrcode&quot;&gt;
+    &lt;div class=&quot;arrow-top&quot;&gt;&lt;/div&gt;
+    &lt;img src=&quot;//upload.jianshu.io/users/qrcodes/6943526/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20170717202111.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/320/h/320&quot; alt=&quot;320&quot; /&gt;
+  &lt;/div&gt;
+" data-original-title="" title=""></a>
+
+  </div>
+  <div id="user-publications"><!----></div>
+  <div id="user-courses"><!----></div>
+  <ul class="list user-dynamic">
+    <li>
+      <a href="https://www.jianshu.com/users/910c6f95a495/subscriptions">
+        <i class="iconfont ic-collection"></i> <span>他关注的专题/文集/连载</span>
+</a>    </li>
+    <li>
+      <a href="https://www.jianshu.com/users/910c6f95a495/liked_notes">
+        <i class="iconfont ic-like"></i> <span>他喜欢的文章</span>
+</a>    </li>
+  </ul>
+  <!-- 专题和文集 -->
+  <div><div><div class="title">
+      他创建的专题
+    </div> <!----> <ul class="list"><li><a href="https://www.jianshu.com/c/3181fe3e2b49" target="_blank" class="avatar-collection"><img src="./static/220442l69mn86qwsu8zfff.png"></a> <a href="https://www.jianshu.com/c/3181fe3e2b49" target="_blank" class="name">Linux--日常使用</a></li><li><a href="https://www.jianshu.com/c/678b6b28f552" target="_blank" class="avatar-collection"><img src="./static/logo.png"></a> <a href="https://www.jianshu.com/c/678b6b28f552" target="_blank" class="name">VUE--日常使用</a></li><li><a href="https://www.jianshu.com/c/89e3bd8ed610" target="_blank" class="avatar-collection"><img src="./static/u_4043586667_435885432_fm_214_gp_0.jpg"></a> <a href="https://www.jianshu.com/c/89e3bd8ed610" target="_blank" class="name">MongoDB--日常使用</a></li><li><a href="https://www.jianshu.com/c/bf96930b75a1" target="_blank" class="avatar-collection"><img src="./static/u_2310268777_952048309_fm_27_gp_0.jpg"></a> <a href="https://www.jianshu.com/c/bf96930b75a1" target="_blank" class="name">Java--日常使用</a></li><li><a href="https://www.jianshu.com/c/d306215b08b6" target="_blank" class="avatar-collection"><img src="./static/20151016a.jpg"></a> <a href="https://www.jianshu.com/c/d306215b08b6" target="_blank" class="name">MySQL--日常使用</a></li><li><a href="https://www.jianshu.com/c/a8f8860f747f" target="_blank" class="avatar-collection"><img src="./static/u_671168294_1954101466_fm_27_gp_0.jpg"></a> <a href="https://www.jianshu.com/c/a8f8860f747f" target="_blank" class="name">PHP--日常使用</a></li><li><a href="https://www.jianshu.com/c/b7454d3018b3" target="_blank" class="avatar-collection"><img src="./static/20160618093614_122.png"></a> <a href="https://www.jianshu.com/c/b7454d3018b3" target="_blank" class="name">Redis--日常使用</a></li> <li><!----> <!----></li></ul> <!----></div> <!----> <div><div class="title">
+    他的文集
+  </div> <ul class="list"><li><a href="https://www.jianshu.com/nb/14468540" target="_blank"><i class="iconfont ic-search-notebook"></i></a> <a href="https://www.jianshu.com/nb/14468540" target="_blank" class="name">
+        似水流年
+        <!----></a></li><li><a href="https://www.jianshu.com/nb/30945255" target="_blank"><i class="iconfont ic-search-notebook"></i></a> <a href="https://www.jianshu.com/nb/30945255" target="_blank" class="name">
+        神兵利器
+        <!----></a></li><li><a href="https://www.jianshu.com/nb/28093301" target="_blank"><i class="iconfont ic-search-notebook"></i></a> <a href="https://www.jianshu.com/nb/28093301" target="_blank" class="name">
+        壹零贰肆
+        <!----></a></li> <li><!----> <!----></li></ul></div></div>
+</div>
+
+  </div>
+</div>
+
+    <script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"windows","read_mode":"day","read_font":"font2","user":{"slug":"910c6f95a495","gender":1},"has_collections":true}</script>
+    
+    <script src="./static/babel-polyfill-6cd2d6b53fe3184b71cc.js.下载" crossorigin="anonymous"></script>
+    <script src="./static/web-base-996081afe4181223ecb7.js.下载" crossorigin="anonymous"></script>
+<script src="./static/web-b4c9a0b0029a543681c9.js.下载" crossorigin="anonymous"></script>
+    
+    <script src="./static/entry-669c2cc742dd86cb4db6.js.下载" crossorigin="anonymous"></script>
+    <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+  
+
+<!----><!----><tbdiv id="playerControlBtn"></tbdiv><tbdiv id="leftFullStackButton"></tbdiv><tbdiv id="rightFullStackButton"></tbdiv></body></html>
