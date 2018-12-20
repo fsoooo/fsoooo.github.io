@@ -1,0 +1,221 @@
+.ui-table-header {
+  color: rgba(255, 255, 255, 0.5);
+}
+.ui-table-header select {
+  margin-top: 2px;
+  margin-left: -6px;
+}
+.ui-table-header .col-one {
+  text-align: right;
+  padding-right: 60px;
+}
+.ui-table-header .col-two {
+  text-align: right;
+  padding-right: 74px;
+}
+.ui-table-tr {
+  line-height: 32px;
+}
+.icon-shiming {
+  margin-right: 4px;
+  font-size: 16px;
+}
+.notReal {
+  color: rgba(255, 255, 255, 0.5);
+}
+.isReal {
+  color: #ffae00;
+}
+.modal-dialog input {
+  margin: 0 auto;
+  width: 80%;
+}
+.chart-wrapper,
+.info-wrapper {
+  height: 238px;
+}
+.info-operation {
+  margin-top: 24px;
+  text-align: right;
+}
+#addAgent select.form-control {
+  margin: 0 auto;
+  padding: 0 12px;
+  width: 80%;
+  color: #333;
+  border: 1px solid #ccc;
+}
+#addAgent select.form-control option {
+  background: #fff;
+  color: #333;
+}
+#addAgent select.form-control option:disabled {
+  color: #ccc;
+}
+/*个人信息*/
+#info .info-img {
+  margin-right: 30px;
+  width: 70px;
+  height: 70px;
+}
+#info .info-wrapper {
+  padding: 40px 10px 40px 40px;
+}
+#info .info-wrapper .name {
+  display: inline-block;
+  width: 50px;
+  text-align-last: justify;
+}
+#info .info-wrapper i {
+  margin: 0 4px;
+}
+#info .info-wrapper p {
+  line-height: 20px;
+}
+#info .info-wrapper .info-datails {
+  color: rgba(255, 255, 255, 0.8);
+}
+.select-wrapper {
+  margin-bottom: 10px;
+}
+.select-wrapper .btn-select {
+  height: 26px;
+  line-height: 26px;
+}
+#performance #main {
+  float: right;
+}
+#performance .chart-header {
+  padding-right: 40px;
+}
+#performance .ui-table-tr {
+  line-height: 18px;
+}
+#performance .ui-table-tr div {
+  margin-top: 18px;
+}
+/*计划详情*/
+.details-left,
+.details-right {
+  margin-bottom: 10px;
+  padding: 10px;
+  line-height: 20px;
+  background: #21294c;
+  overflow: hidden;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.details-left img {
+  width: initial;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.details-left .title {
+  margin-top: 5px;
+  font-size: 16px;
+}
+.details-left .name {
+  display: inline-block;
+  margin-right: 40px;
+  width: 100px;
+  text-align: right;
+}
+.details-right {
+  height: 160px;
+}
+.details-right .title {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.rights-scroll {
+  height: 112px;
+}
+.rights-scroll td {
+  padding: 0 10px 10px 0;
+  width: 20%;
+}
+.rights-scroll td:last-child {
+  width: 60%;
+}
+.count-wrapper {
+  height: 80px;
+  line-height: 80px;
+  background: #21294c;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-bottom: 10px;
+}
+.count {
+  padding-right: 20px;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+.count li {
+  margin-left: 70px;
+  display: inline-block;
+}
+.count span {
+  color: #00a2ff;
+}
+@media (min-width: 992px) {
+  .section .col-md-3 {
+    width: 14.28%;
+  }
+}
+.user {
+  font-size: 16px;
+}
+/*计划书详情*/
+.plan-wrapper {
+  height: 400px;
+  background: #21294c;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  overflow: hidden;
+}
+.plan-wrapper .title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  text-align: center;
+  color: #242b51;
+  background: #00a2ff;
+}
+.plan-wrapper .name {
+  font-size: 16px;
+}
+.plan-wrapper .plan-content {
+  padding: 20px;
+}
+.plan-wrapper .plan-list {
+  margin-top: 20px;
+}
+.plan-wrapper .plan-list li {
+  line-height: 20px;
+}
+.comment {
+  line-height: 20px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+}
+.btn-unfold {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #21294c;
+}
+.btn-unfold i {
+  color: #00a2ff;
+}
+.ellipsis {
+  line-height: 32px;
+}

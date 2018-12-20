@@ -1,0 +1,58 @@
+.section {
+  float: left;
+}
+.section .section-item {
+  padding: 60px 50px;
+  width: 200px;
+  height: 160px;
+}
+.ui-table {
+  width: 100%;
+  padding-left: 220px;
+}
+.ui-table .ui-table-col1 {
+  margin-top: 32px;
+  color: #00a2ff;
+}
+.ui-table .ui-table-col2 {
+  margin-top: 32px;
+}
+.ui-table .ui-table-col3 {
+  padding-right: 100px;
+}
+.ui-table .ui-table-col3 .name {
+  margin-bottom: 12px;
+}
+.ui-table .ui-table-col3 .name .date {
+  margin-left: 10px;
+  color: #6b6f83;
+}
+.ui-table .ui-table-col3 .comment {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+}
+.ui-table .ui-table-col4 {
+  float: right;
+  width: 88px;
+}
+.ui-table .ui-table-col4 .btn {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.btn-unfold {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #21294c;
+}
+.btn-unfold i {
+  color: #00a2ff;
+}

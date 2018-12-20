@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>天眼互联-科技让保险无限可能</title>
+		<link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/lib/iconfont.css" />
+		<link rel="stylesheet" href="css/common_backend.css" />
+		<link rel="stylesheet" href="css/channel.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo-wrapper">
+				<img src="img/logo.png" alt="" />
+			</div>
+			<div class="header-right">
+				<div class="search-wrapper fl">
+					<select class="form-control">
+						<option>渠道</option>
+						<option>2016年</option>
+						<option>2015年</option>
+						<option>2014年</option>
+						<option>2013年</option>
+					</select>
+					<input>
+					<button class="btn btn-primary"><i class="iconfont icon-sousuo"></i></button>
+				</div>
+				<div class="user-wrapper">
+					<span class="user-name">田小田</span>
+					<button class="btn btn-default">退出</button>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<ul>
+				<li><a href="index.html"><i class="iconfont icon-shouye"></i>首页</a></li>
+				<li><a href="agent.html"><i class="iconfont icon-dailiren"></i>代理人</a></li>
+				<li><a href="client.html"><i class="iconfont icon-kehu"></i>客户管理</a></li>
+				<li><a href="product.html"><i class="iconfont icon-chanpin"></i>产品管理</a></li>
+				<li><a href="activity.html"><i class="iconfont icon-xing"></i>活动管理</a></li>
+				<li class="active"><a href="channel.html"><i class="iconfont icon-qudao"></i>渠道管理</a></li>
+				<li><a href="brokerage.html"><i class="iconfont icon-yongjin"></i>佣金管理</a></li>
+			</ul>
+		</div>
+		<div class="main-wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="select-wrapper radius">
+						<div class="form-inline radius">
+							<div class="form-group">
+								<div class="select-item">
+									<label for="name">选择渠道:</label>
+									<select class="form-control">
+										<option>全部渠道</option>
+										<option>渠道一</option>
+										<option>渠道二</option>
+									</select>
+								</div>
+							</div>
+							<button class="btn btn-warning fr" data-toggle="modal" data-target="#add">添加渠道</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ui-table col-lg-12">
+					<div class="ui-table-header radius">
+						<span class="col-md-1">渠道名称</span>
+						<span class="col-md-1">创建时间</span>
+						<span class="col-md-1">渠道人数</span>
+						<span class="col-md-1">渠道任务</span>
+						<span class="col-md-2">任务进度</span>
+						<span class="col-md-2">渠道产生佣金</span>
+						<span class="col-md-1">代理人产生佣金</span>
+						<span class="col-md-3 col-two">操作</span>
+					</div>
+					<div class="ui-table-body">
+						<ul>
+							<li class="ui-table-tr">
+								<div class="col-md-1">渠道名称显示</div>
+								<div class="col-md-1">2017-09-27</div>
+								<div class="col-md-1">20</div>
+								<div class="col-md-1">200万</div>
+								<div class="col-md-2">
+									<div class="progress">
+									    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+									    </div>
+									</div>
+									<span class="color-default">60%</span>
+								</div>
+								<div class="col-md-2">3000</div>
+								<div class="col-md-1">2000</div>
+								<div class="col-md-3 text-right">
+									<button class="btn btn-warning" data-toggle="modal" data-target="#change">佣金设置</button>
+									<a class="btn btn-primary" href="html/channel/channel_details.html">查看详情</a>
+								</div>
+							</li>
+							<li class="ui-table-tr">
+								<div class="col-md-1">渠道名称显示</div>
+								<div class="col-md-1">2017-09-27</div>
+								<div class="col-md-1">20</div>
+								<div class="col-md-1">200万</div>
+								<div class="col-md-2">
+									<div class="progress">
+									    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+									    </div>
+									</div>
+									<span class="color-default">60%</span>
+								</div>
+								<div class="col-md-2">3000</div>
+								<div class="col-md-1">2000</div>
+								<div class="col-md-3 text-right">
+									<button class="btn btn-warning" data-toggle="modal" data-target="#change">佣金设置</button>
+									<a class="btn btn-primary" href="html/channel/channel_details.html">查看详情</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="row text-center">
+						<ul class="pagination">
+			                <li class="disabled"><span>«</span></li>
+			                <li class="active"><span>1</span></li>
+			                <li><a>2</a></li>
+			                <li><a>3</a></li>
+			        		<li><a rel="next">»</a></li>
+			        	</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--添加渠道-->
+		<div class="modal fade in" id="add" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog  modal-channel" role="document">
+				<div class="modal-content">
+					<div class="modal-header notitle">
+						<button type="button" class="" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-cancel"></i></button>
+					</div>
+					<div class="modal-body">
+						<div class="channel-title"><span>渠道名称</span><input type="text" /></div>
+						<div class="channel-content">
+							<div class="channel-left">
+								<ul>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+									<li>
+										<label>
+											<i class="iconfont icon-weixuan"></i>
+											<input hidden type="checkbox">
+										</label>
+										<span>1804</span><span class="name">欧阳震华</span>
+									</li>
+								</ul>
+							
+							</div>
+							
+							<div class="channel-right">
+								<ul>
+									<li>
+										<span>1804</span><span class="name">欧阳震华</span><i class="iconfont icon-cancel"></i>
+									</li>
+									<li>
+										<span>1804</span><span class="name">欧阳震华</span><i class="iconfont icon-cancel"></i>
+									</li>
+									<li>
+										<span>1804</span><span class="name">欧阳震华</span><i class="iconfont icon-cancel"></i>
+									</li>
+									<li>
+										<span>1804</span><span class="name">欧阳震华</span><i class="iconfont icon-cancel"></i>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<p class="fr color-default">还能添加11人</p>
+					</div>
+					<div class="modal-footer">
+						<button id="btn-yes" class="btn btn-primary">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--佣金设置-->
+		<div class="modal fade in" id="change" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog  modal-borkerage" role="document">
+				<div class="modal-content">
+					<div class="modal-header notitle">
+						<button type="button" class="" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-cancel"></i></button>
+					</div>
+					<div class="modal-body">
+						<table>
+							<tr>
+								<th width="96px">缴别</th>
+								<th width="176px">初始代理人佣金比</th>
+								<th width="76px">设置佣金比</th>
+							</tr>
+							<tr>
+								<td>20年</td>
+								<td>30%</td>
+								<td><input type="text" />%</td>
+							</tr>
+							<tr>
+								<td>15年</td>
+								<td>25%</td>
+								<td><input type="text" />%</td>
+							</tr>
+							<tr>
+								<td>10年</td>
+								<td>20%</td>
+								<td><input type="text" />%</td>
+							</tr>
+							<tr>
+								<td>5年</td>
+								<td>20%</td>
+								<td><input type="text" />%</td>
+							</tr>
+							<tr>
+								<td>2年</td>
+								<td>10%</td>
+								<td><input type="text" />%</td>
+							</tr>
+							<tr>
+								<td>趸交</td>
+								<td>5%</td>
+								<td><input type="text" />%</td>
+							</tr>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button id="btn-yes" class="btn btn-primary">确定修改</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/lib/jquery-1.11.3.min.js"></script>
+		<script src="js/lib/echarts.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/common_backend.js"></script>
+		<script>
+			
+			new CheckTable('.channel-left');
+			$(".channel-left").panel({iWheelStep: 32});
+		</script>
+	</body>
+</html>

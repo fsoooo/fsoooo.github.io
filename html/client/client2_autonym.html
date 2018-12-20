@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>天眼互联-科技让保险无限可能</title>
+		<link rel="stylesheet" href="../../css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/lib/iconfont.css" />
+		<link rel="stylesheet" href="../../css/common_backend.css" />
+		<link rel="stylesheet" href="../../css/client_details.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo-wrapper">
+				<img src="../../img/logo.png" alt="" />
+			</div>
+			<div class="nav-top-wrapper">
+				<ul>
+					<li class="active"><a href="../../client.html">个人客户</a></li>
+					<li><a href="../../client.html">企业客户</a></li>
+					<li><a href="../../client.html">组织团体</a></li>
+				</ul>
+			</div>
+			<div class="user-wrapper">
+				<span class="user-name">田小田</span>
+				<button class="btn btn-default">退出</button>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<ul>
+				<li><a href="../../index.html"><i class="iconfont icon-shouye"></i>首页</a></li>
+				<li><a href="../../agent.html"><i class="iconfont icon-dailiren"></i>代理人</a></li>
+				<li class="active"><a href="../../client.html"><i class="iconfont icon-kehu"></i>客户管理</a></li>
+				<li><a href="../../product.html"><i class="iconfont icon-chanpin"></i>产品管理</a></li>
+				<li><a href="../../activity.html"><i class="iconfont icon-xing"></i>活动管理</a></li>
+				<li><a href="../../channel.html"><i class="iconfont icon-qudao"></i>渠道管理</a></li>
+				<li><a href="../../brokerage.html"><i class="iconfont icon-yongjin"></i>佣金管理</a></li>
+			</ul>
+		</div>
+		<div class="main-wrapper">
+			<div class="row">
+				<ol class="breadcrumb col-lg-12">
+				    <li><a href="#">客户管理</a><i class="iconfont icon-gengduo"></i></li>
+				    <li><a href="#">个人客户</a><i class="iconfont icon-gengduo"></i></li>
+				    <li class="active">田小田</li>
+				</ol>
+			</div>
+			<div class="row">
+				<div class="section">
+					 <div class="col-md-3 col-xs-6">
+					 	<!--个人客户页面显示-->
+					 	<a href="client2_info.html" class="section-item">个人信息</a>
+					 	
+					 	<!--企业客户页面显示-->
+					 	<!--<a href="client2_info.html" class="section-item">企业信息</a>-->
+					 	
+					 	<!--组织团体页面显示-->
+					 	<!--<a href="client2_info.html" class="section-item">团体信息</a>-->
+				    </div>
+				    <div class="col-md-3 col-xs-6">
+				    	<a href="client2_record.html" class="section-item">保险记录</a>
+				    </div>
+				    <div class="col-md-3 col-xs-6">
+				    	<a href="#" class="section-item">操作记录</a>
+				    </div>
+				    <div class="col-md-3 col-xs-6">
+				    	<a href="client2_autonym.html" class="section-item active">实名资料</a>
+				    </div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="ui-table-tr" style="line-height: 30px;">
+						<div class="col-lg-12 color-default" style="font-size: 16px;font-weight: bold;">田大田</div>
+						<div class="col-md-3">注册时间：<span>2017-09-27</span></div>
+						<div class="col-md-3">联系方式：<span>13011145847</span></div>
+						<div class="col-md-2">证件类型：<span>身份证</span></div>
+						<div class="col-md-4">证件号码：<span>125478965412541568</span></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row autonym">
+				<div class="col-lg-12">
+					<div class="certificate">
+						<h2 class="title">证件信息</h2>
+						<div class="img-wrapper col-lg-3">
+							<img src="../../img/zhengjianzhengmian.png" alt="" /><span class="btn btn-default" data-toggle="modal" data-target="#larger">查看大图</span>
+						</div>
+						<div class="img-wrapper col-lg-3">
+							<img src="../../img/zhengjianfanmian.png" alt="" /><span class="btn btn-default" data-toggle="modal" data-target="#larger">查看大图</span>
+						</div>
+						<div class="img-wrapper col-lg-3">
+							<img src="../../img/zhengjianshouchi.png" alt="" /><span class="btn btn-default" data-toggle="modal" data-target="#larger">查看大图</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="standard">
+						<h2 class="title">审核标准</h2>
+						<ul>
+							<li>1.身份证信息核对一致</li>
+							<li>1.身份证信息核对一致</li>
+							<li>1.身份证信息核对一致</li>
+						</ul>
+					</div>
+				</div>
+				<div class="operation">
+					<button class="btn btn-primary" data-toggle="modal" data-target="#pass">通过审核</button>
+					<button class="btn btn-warning" data-toggle="modal" data-target="#notPass">审核不通过</button>
+				</div>
+			</div>
+		</div>
+		
+		<!--查看大图-->
+		<div class="modal fade in" id="larger" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-alert" role="document">
+				<div class="modal-content">
+					<div class="modal-header notitle">
+						<button type="button" class="" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-cancel"></i></button>
+					</div>
+					<div class="modal-body">
+						<img src="../../img/zhengjianzhengmian.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--审核通过-->
+		<div class="modal fade in" id="pass" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-alert modal-nofooter" role="document">
+				<div class="modal-content">
+					<div class="modal-header notitle">
+						<button type="button" class="" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-cancel"></i></button>
+					</div>
+					<div class="modal-body">
+						<i class="iconfont icon-duihao"></i>
+						<p>审核通过</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--审核不通过-->
+		<div class="modal fade in" id="notPass" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-alert modal-cause" role="document">
+				<div class="modal-content">
+					<div class="modal-header notitle">
+						<button type="button" class="" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-cancel"></i></button>
+					</div>
+					<div class="modal-body">
+						<i class="iconfont icon-warning"></i>
+						<p>审核未通过</p>
+						<div class="cause-wapper">
+							<p class="title">未通过原因:</p>
+							<textarea class="cause-text"></textarea>
+							<button id="btn-cause" class="btn btn-primary" disabled="">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/lib/jquery-1.11.3.min.js"></script>
+		<script src="../../js/lib/bootstrap.min.js"></script>
+		<script src="../../js/common_backend.js"></script>
+		<script>
+			$('.cause-text').bind('input propertychange', function() {
+				$('#btn-cause')[0].disabled = !$(this).val();
+			});
+		</script>
+	</body>
+</html>

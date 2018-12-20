@@ -1,0 +1,88 @@
+.ui-table-tr {
+  line-height: 32px;
+}
+.progress {
+  float: left;
+  margin: 8px 4px 0 0;
+  margin-bottom: 0;
+  width: 100px;
+  height: 16px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.progress-bar {
+  background: #00a2ff;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/*添加渠道*/
+.modal-channel {
+  width: 400px;
+}
+.modal-channel .modal-body {
+  padding: 15px 22px;
+}
+.modal-channel .channel-title input {
+  margin-left: 6px;
+  width: 300px;
+  height: 24px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.modal-channel .channel-content {
+  margin: 10px 0;
+  overflow: hidden;
+}
+.modal-channel .channel-content .name {
+  margin: 0 10px 0 16px;
+}
+.modal-channel .channel-content li {
+  line-height: 18px;
+}
+.modal-channel .channel-left,
+.modal-channel .channel-right {
+  width: 158px;
+  height: 330px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.modal-channel .channel-left ul,
+.modal-channel .channel-right ul {
+  padding: 16px 18px;
+}
+.modal-channel .channel-left {
+  float: left;
+}
+.modal-channel .channel-right {
+  float: right;
+  color: #00a2ff;
+  border-color: #00a2ff;
+}
+.modal-channel .channel-right .iconfont {
+  color: #333;
+  vertical-align: text-top;
+}
+/*佣金设置*/
+.modal-borkerage .name {
+  display: inline-block;
+  margin-right: 30px;
+  width: 64px;
+  text-align: right;
+}
+.modal-borkerage .form-control {
+  display: inline-block;
+  width: 120px;
+}
+.chart-header .form-control {
+  margin-right: 5%!important;
+}

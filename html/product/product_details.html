@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>天眼互联-科技让保险无限可能</title>
+		<link rel="stylesheet" href="../../css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/lib/iconfont.css" />
+		<link rel="stylesheet" href="../../css/common_backend.css" />
+		<link rel="stylesheet" href="../../css/product.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="logo-wrapper">
+				<img src="../../img/logo.png" alt="" />
+			</div>
+			<div class="nav-top-wrapper fl">
+				<ul>
+					<li>
+						<a href="../../product.html">在售产品</a>
+					</li>
+					<li class="active">
+						<a href="product_stay_on.html">待售产品</a>
+					</li>
+					<li>
+						<a href="product_sold_out.html">下架产品</a>
+					</li>
+				</ul>
+			</div>
+			<div class="user-wrapper fr">
+				<span class="user-name">田小田</span>
+				<button class="btn btn-default">退出</button>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<ul>
+				<li><a href="../../index.html"><i class="iconfont icon-shouye"></i>首页</a></li>
+				<li><a href="../../agent.html"><i class="iconfont icon-dailiren"></i>代理人</a></li>
+				<li><a href="../../client.html"><i class="iconfont icon-kehu"></i>客户管理</a></li>
+				<li class="active"><a href="../../product.html"><i class="iconfont icon-chanpin"></i>产品管理</a></li>
+				<li><a href="../../activity.html"><i class="iconfont icon-xing"></i>活动管理</a></li>
+				<li><a href="../../channel.html"><i class="iconfont icon-qudao"></i>渠道管理</a></li>
+				<li><a href="../../brokerage.html"><i class="iconfont icon-yongjin"></i>佣金管理</a></li>
+			</ul>
+		</div>
+		<div class="main-wrapper">
+			<div class="row">
+				<ol class="breadcrumb col-lg-12">
+				    <li><a href="#">产品管理</a><i class="iconfont icon-gengduo"></i></li>
+				    <li><a href="#">代售产品</a><i class="iconfont icon-gengduo"></i></li>
+				    <li class="active">中国人寿成人重疾险</li>
+				</ol>
+			</div>
+			<div class="row">
+				<div class="section">
+					<div class="col-lg-4 col-xs-6">
+					 	<a href="agent2_info.html" class="section-item active">产品详情 </a>
+				    </div>
+				    <div class="col-lg-4 col-xs-6">
+				    	<a href="client2_record.html" class="section-item">销售统计</a>
+				    </div>
+				    <div class="col-lg-4 col-xs-6">
+				    	<a href="product_comment.html.html" class="section-item">评论</a>
+				    </div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-7 policy">
+					<div class="policy-wrapper">
+						
+						<div class="product-avatar">
+							<div class="product-img">
+								<img src="../../img/avatar.png" alt="" />
+								<input hidden onchange="upLoadImg(this);" accept="image/*" type="file">
+								<input hidden type="text">
+							</div>
+							<button id="up-cover" class="btn btn-default fr">上传封面</button>
+						</div>
+						<div class="policy-info">
+							<h3 class="title">中国人寿成人重疾险<span class="color-primary">(未上架)</span></h3>
+							<button class="btn btn-warning" data-toggle="modal" data-target="#addTags">添加标签</button>
+						</div>
+						<div class="policy-list">
+							<p><span class="name">上架时间</span><i>:</i>2017-09-22</p>
+							<p><span class="name">下架时间</span><i>:</i>-</p>
+							<p><span class="name">公司名称</span><i>:</i>中国人寿</p>
+							<p><span class="name">保险险种</span><i>:</i>个人-重疾险</p>
+							<p><span class="name">条款</span><i>:</i><a href="#">《中国人寿成人重疾条款》</a></p>
+							<div><span class="name vtop">责任保额</span><i class="vtop">:</i>
+								<ul class="duty-list">
+									<li><span class="duty-name">重症疾病</span>5万</li>
+									<li><span class="duty-name">轻症疾病</span>5万</li>
+									<li><span class="duty-name">身故保障金</span>已交保险费</li>
+									<li><span class="duty-name">全残保障金 </span>全部保险金/两万保险金额</li>
+								</ul>
+							</div>
+							<p><span class="name">特别约定</span><i>:</i>保障期内在发生任何风险都不进行赔偿。</p>
+							<p><span class="name">费率表</span><i>:</i><a href="#">查看详情</a></p>
+							<p><span class="name">缴费方式</span><i>:</i>年缴</p>
+							<p><span class="name">缴费期限</span><i>:</i><span class="mr">20年</span><span class="mr">15年</span><span class="mr">10年</span><span class="mr">5年</span><span class="mr">趸交</span></p>
+							<p><span class="name">年龄限制</span><i>:</i>18-60周岁</p>
+							<p><span class="name">职业类别</span><i>:</i>1-4类   <a href="#"> 职业类别表</a></p>
+							<div><span class="name vtop">产品简介</span><i class="vtop">:</i>
+								<ul class="duty-list">
+									<li>中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国人寿保险 中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国</li>
+								</ul>
+							</div>
+							<div><span class="name vtop">产品介绍</span><i class="vtop">:</i>
+								<div class="duty-list duty-details">
+									<ul>
+										<li>中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国人寿保险 中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国中国人寿保险中国人寿保险中国人寿保险中国人寿保险中国</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 info">
+					<div class="premium">
+						<span>保费</span>
+						<span class="fr color-primary">1150元</span>
+					</div>
+					<div class="rate">
+						<div class="rate-total">
+							<span>共计产品返佣</span>
+							<span class="fr">5000<i class="percent">(60%)</i></span>
+						</div>
+						<ul>
+							<li>
+								<span>公司佣金比</span>
+								<span class="fr">3000<i class="percent">(60%)</i></span>
+							</li>
+							<li>
+								<span>公司佣金比</span>
+								<span class="fr">3000<i class="percent">(60%)</i></span>
+							</li>
+							<li>
+								<span>代理人佣金比</span>
+								<span class="fr">3000<i class="percent">(60%)</i></span>
+							</li>
+						</ul>
+					</div>
+					<div class="grade">
+						<span class="name color-negative">综合评分:</span>
+						<span class="iconfont icon-manyi"></span>
+						<span class="iconfont icon-manyi"></span>
+						<span class="iconfont icon-manyidu"></span>
+						<span class="iconfont icon-manyidu"></span>
+						<span class="iconfont icon-manyidu"></span>
+					</div>
+					
+					<div class="cause">
+						<span class="fl">下架原因：</span>
+						<p class="cause-text">产品不好卖产品不好卖产品不好卖产品不好卖产品不好卖产品不好卖产品不好卖产品不好卖产品不好卖产品不好卖</p>
+					</div>
+					<div class="operation">
+						<button class="btn btn-primary" data-toggle="modal" data-target="#addTask">上架该产品</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="addTask" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-alert" role="document">
+				<div class="modal-content">
+					<div class="modal-header notitle">
+						<button type="button" class="" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-cancel"></i></button>
+					</div>
+					<div class="modal-body">
+						<i class="iconfont icon-warning"></i>
+						<p>上架前是否要进行个性化编辑</p>
+					</div>
+					<div class="modal-footer">
+						<a href="product_details_edit.html"><button class="btn btn-primary">是</button></a>
+						<button id="btn-no" class="btn btn-warning">否</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="success-up" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-alert" role="document">
+				<div class="modal-content">
+					<div class="modal-header notitle">
+						<button type="button" class="" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-cancel"></i></button>
+					</div>
+					<div class="modal-body">
+						<i class="iconfont icon-duihao"></i>
+						<p>上架成功</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="color-primary">回到产品列表</a>
+						<a href="#" class="color-default">回到产品管理</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="modal fade" id="addTags" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header notitle">
+						<button type="button" class="" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-cancel"></i></button>
+					</div>
+					<div class="modal-body">
+						<div class="title">标签:<span class="tips">建议标签字数不要过长</span></div>
+						<div class="selected-wrapper">
+							<div class="selected">
+								<span class="tag">高回报<i class="iconfont icon-quxiao" style="display: inline;"></i></span>
+							</div>
+							<div class="custom">
+								<input id="addTag" type="text" placeholder="添加标签" />
+								
+							</div>
+						</div>
+						<ul class="tags-classify">
+							<li>
+								<label>选择标签分类</label>
+								<select class="form-control">
+									<option>全局标签</option>
+									<option>全局标签2</option>
+									<option>全局标签3</option>
+								</select>
+							</li>
+							<li>
+								<label>选择标签类型</label>
+								<select class="form-control">
+									<option>标签类型</option>
+									<option>标签类型2</option>
+									<option>标签类型3</option>
+								</select>
+							</li>
+						</ul>
+						<div class="tags-wrapper">
+							<span class="tag">高回报<i class="iconfont icon-quxiao"></i></span>
+							<span class="tag">高回报<i class="iconfont icon-quxiao"></i></span>
+							<span class="tag">60种重疾保障<i class="iconfont icon-quxiao"></i></span>
+							
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../../js/lib/jquery-1.11.3.min.js"></script>
+		<script src="../../js/lib/bootstrap.min.js"></script>
+		<script src="../../js/common_backend.js"></script>
+		<script>
+			$(".duty-details").panel({iWheelStep:32});
+			// 上传封面
+			$('#up-cover').click(function(){
+				$('.product-img').find('input:hidden').eq(0).click();
+			});
+			
+			
+			
+			$('#btn-no').click(function(){
+				$('#addTask').modal('hide');
+				$('#success-up').modal('show');
+				
+			});
+			
+			
+			
+			
+			// 上传照片
+			var upLoadImg = function(e){
+				var _this = $(e).parent();
+				var $c = _this.find('input[type=file]')[0];
+				var file = $c.files[0],reader = new FileReader();
+			    reader.readAsDataURL(file);
+			    reader.onload = function(e){
+			    	_this.find('img').attr('src',e.target.result).css({'width':'11rem','height':'7rem'});
+			    	var $targetEle = _this.find('input:hidden').eq(1);
+			    	$targetEle.val(e.target.result);
+			    	console.log($targetEle.val())
+			    	
+			    	if($('#frontVal').val() && $('#contraryVal').val()){
+			    		$('#next').prop('disabled',false);
+			    	}
+			    	
+				};
+			};
+			
+			$(document).on('click','.selected-wrapper',function(e){
+				var target = $(e.target);
+				if(target.hasClass('selected-wrapper')){
+					
+					$(this).toggleClass('focus');
+				
+					if($(this).hasClass('focus')){
+						$('#addTag').focus();
+					}else{
+						$('#addTag').blur();
+					}
+				}
+			})
+				
+				
+			
+			
+		</script>
+	</body>
+
+</html>

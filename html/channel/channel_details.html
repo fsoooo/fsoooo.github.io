@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>天眼互联-科技让保险无限可能</title>
+		<link rel="stylesheet" href="../../css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/lib/iconfont.css" />
+		<link rel="stylesheet" href="../../css/common_backend.css" />
+		<link rel="stylesheet" href="../../css/channel.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo-wrapper">
+				<img src="../../img/logo.png" alt="" />
+			</div>
+			<div class="header-right">
+				<div class="user-wrapper">
+					<span class="user-name">田小田</span>
+					<button class="btn btn-default">退出</button>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<ul>
+				<li><a href="../../index.html"><i class="iconfont icon-shouye"></i>首页</a></li>
+				<li><a href="../../agent.html"><i class="iconfont icon-dailiren"></i>代理人</a></li>
+				<li><a href="../../client.html"><i class="iconfont icon-kehu"></i>客户管理</a></li>
+				<li><a href="../../product.html"><i class="iconfont icon-chanpin"></i>产品管理</a></li>
+				<li><a href="../../activity.html"><i class="iconfont icon-xing"></i>活动管理</a></li>
+				<li class="active"><a href="../../channel.html"><i class="iconfont icon-qudao"></i>渠道管理</a></li>
+				<li><a href="../../brokerage.html"><i class="iconfont icon-yongjin"></i>佣金管理</a></li>
+			</ul>
+		</div>
+		<div class="main-wrapper">
+			<div class="row">
+				<ol class="breadcrumb col-lg-12">
+				    <li><a href="#">渠道管理</a><i class="iconfont icon-gengduo"></i></li>
+				    <li><a href="#">渠道列表</a><i class="iconfont icon-gengduo"></i></li>
+				    <li class="active">渠道的详细名称</li>
+				</ol>
+			</div>
+			<div class="row">
+				<div class="section section-5">
+					<div class="col-lg-3 col-xs-6">
+					 	<a href="channel_details.html" class="section-item active">渠道详情 </a>
+				    </div>
+				    <div class="col-lg-3 col-xs-6">
+				    	<a href="channel_record.html" class="section-item">销售记录</a>
+				    </div>
+				    <div class="col-lg-3 col-xs-6">
+				    	<a href="channel_agent.html" class="section-item">渠道代理人</a>
+				    </div>
+				    <div class="col-lg-3 col-xs-6">
+				    	<a href="channel_active.html" class="section-item">活跃产品</a>
+				    </div>
+				    <div class="col-lg-3 col-xs-6">
+				    	<a href="channel_task.html" class="section-item">渠道任务</a>
+				    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="ui-table-tr" style="line-height: 30px;">
+						<div class="col-lg-12 color-default">渠道的详细名称</div>
+						<div class="col-md-2">创建时间：<span>2017-09-27</span></div>
+						<div class="col-md-2">代理人数：<span>15人</span></div>
+						<div class="col-md-2">客户人数：<span>400人</span></div>
+						<div class="col-md-2">本月销售额：<span>20,000元</span></div>
+						<div class="col-md-2">今年累计销售额：<span>20,000元</span></div>
+						<button id="setTask" class="btn btn-warning fr" style="margin-top: -16px;" data-toggle="modal" data-target="#addTask">佣金设置</button>
+					</div>
+				</div>
+			</div>
+			<div class="row select-wrapper">
+				<div class="col-lg-12">
+					<div class="chart-wrapper" style="height: 238px;">
+						<div class="chart-header">
+							<span class="btn-select active">年</span>
+							<span class="btn-select">季</span>
+							<select class="form-control fr">
+								<option>2017年</option>
+								<option>2016年</option>
+								<option>2015年</option>
+								<option>2014年</option>
+								<option>2013年</option>
+							</select>
+						</div>
+						<div id="main" style="width: 96%;height:180px;"></div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		<script src="../../js/lib/jquery-1.11.3.min.js"></script>
+		<script src="../../js/lib/echarts.js"></script>
+		<script src="../../js/lib/bootstrap.min.js"></script>
+		<script src="../../js/common_backend.js"></script>
+		<script>
+			var data1 = {
+				xDatas: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+				data : ['任务额度','已完成额度'],
+				yDatas : [
+					[120, 132, 101, 134, 90, 230, 210, 132, 232, 134, 90, 200],
+					[220, 182, 191, 234, 290, 330, 310, 132, 191, 134, 90, 150]
+				]
+			}
+			echartOptions(data1,'main')
+			function echartOptions(obj,ele){
+				var color = ['#da4fdc','#63dc4f','#00a2ff','#faf722','#c61e57','#1aeddc'];
+				var data1 = obj.data;
+				var newData = [];
+				for(var i=0,l=data1.length;i<l;i++){
+					var dataobj = {};
+					dataobj.name = data1[i];
+					dataobj.icon = 'pin';
+					dataobj.textStyle= {};
+					dataobj.textStyle.color = color[i];
+					newData.push(dataobj);
+				}
+				var newYData = [];
+				var yDatas = obj.yDatas;
+				for(var i=0,l=yDatas.length;i<l;i++){
+					var dataobj = {};
+					dataobj.name = data1[i];
+					dataobj.type = 'bar';
+					dataobj.barWidth = 20;
+					dataobj.data = yDatas[i];
+					dataobj.itemStyle = {
+						normal: {
+                            barBorderRadius:[4, 4, 0, 0]
+                        }
+					};
+					newYData.push(dataobj);
+				}
+				var option = {
+					color: color,
+					tooltip: {
+						trigger: 'axis',
+						axisPointer: {
+							type: 'shadow'
+						}
+					},
+					legend: {
+						data: newData,
+						bottom: '0px',
+						left: '20px',
+						textStyle: {
+							fontSize: 10
+						}
+					},
+					grid: {
+						top: '6%',
+						left: '4%',
+						right: '2%',
+						bottom: '20%',
+						containLabel: true
+					},
+					xAxis: [{
+						type: 'category',
+						axisLabel: {
+					　  		textStyle: {
+					　　  			color: '#83879d'
+					　　		}
+						},
+						splitLine:{  
+	                        show:true,
+	                        lineStyle:{
+								color: '#2f365a',
+							}
+	                    },
+						data: obj.xDatas
+					}],
+					yAxis: [{
+						type: 'value',
+						axisLabel: {
+					　  		textStyle: {
+					　　  			color: '#00a2ff'
+					　　		}
+						},
+						splitLine:{  
+	                        lineStyle:{
+								color: '#2f365a',
+							}
+	                    },
+					}],
+					series: newYData
+				};
+				var myChart1 = echarts.init(document.getElementById(ele));
+				myChart1.setOption(option);
+				$(window).resize(function(){
+	                myChart1.resize();
+	            });  
+			}
+		</script>
+	</body>
+</html>

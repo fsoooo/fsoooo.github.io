@@ -1,0 +1,21 @@
+/*主题色*/
+/*深色背景*/
+/*浅色背景*/
+/*橙*/
+/*蓝*/
+/*高度*/
+.select-wrapper .btn-default {
+  margin-top: 10px;
+}
+.select-wrapper .form-inline {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background: #21294c;
+}
+.select-wrapper .form-inline label {
+  color: #00a2ff;
+  vertical-align: sub;
+}
+.select-wrapper select.form-control {
+  margin-right: 30px;
+}

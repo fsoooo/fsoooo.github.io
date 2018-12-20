@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>天眼互联-科技让保险无限可能</title>
+		<link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/lib/iconfont.css" />
+		<link rel="stylesheet" href="css/lib/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="css/common_backend.css" />
+		<link rel="stylesheet" href="css/product.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="logo-wrapper">
+				<img src="img/logo.png" alt="" />
+			</div>
+			<div class="nav-top-wrapper fl">
+				<ul>
+					<li class="active">
+						<a href="product.html">在售产品</a>
+					</li>
+					<li>
+						<a href="html/product/product_stay_on.html">待售产品</a>
+					</li>
+					<li>
+						<a href="html/product/product_sold_out.html">下架产品</a>
+					</li>
+					<li>
+						<a href="html/product/product_sold_out.html">产品排行</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header-right">
+				<div class="search-wrapper fl">
+					<select class="form-control">
+						<option>产品</option>
+						<option>2016年</option>
+						<option>2015年</option>
+						<option>2014年</option>
+						<option>2013年</option>
+					</select>
+					<input />
+					<button class="btn btn-primary"><i class="iconfont icon-sousuo"></i></button>
+				</div>
+				<div class="user-wrapper">
+					<span class="user-name">田小田</span>
+					<button class="btn btn-default">退出</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="menu-wrapper">
+			<ul>
+				<li><a href="index.html"><i class="iconfont icon-shouye"></i>首页</a></li>
+				<li><a href="agent.html"><i class="iconfont icon-dailiren"></i>代理人</a></li>
+				<li><a href="client.html"><i class="iconfont icon-kehu"></i>客户管理</a></li>
+				<li class="active"><a href="product.html"><i class="iconfont icon-chanpin"></i>产品管理</a></li>
+				<li><a href="activity.html"><i class="iconfont icon-xing"></i>活动管理</a></li>
+				<li><a href="channel.html"><i class="iconfont icon-qudao"></i>渠道管理</a></li>
+				<li><a href="brokerage.html"><i class="iconfont icon-yongjin"></i>佣金管理</a></li>
+			</ul>
+		</div>
+		<div id="product" class="main-wrapper">
+			<div class="row">
+				<div class="select-wrapper radius">
+					<div class="form-inline radius">
+						<div class="form-group">
+							<div class="select-item">
+								<label for="name">上架时间:</label>
+				                <div class="input-group date form_date">
+				                    <input id="date" class="form-control" type="text" value="" placeholder="请选择" readonly>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+				                </div>
+							</div>
+							<div class="select-item">
+								<label for="name">所属公司:</label>
+								<select class="form-control">
+									<option>公司分类</option>
+									<option>公司分类1</option>
+									<option>公司分类2</option>
+								</select>
+								<select class="form-control">
+									<option>公司名称</option>
+									<option>公司1</option>
+									<option>公司2</option>
+								</select>
+							</div>
+							
+							<div class="select-item">
+								<label for="name">产品分类:</label>
+								<select class="form-control">
+									<option>一级分类</option>
+									<option>一级分类1</option>
+									<option>一级分类2</option>
+								</select>
+								<select class="form-control">
+									<option>二级分类</option>
+									<option>二级分类1</option>
+									<option>二级分类2</option>
+								</select>
+							</div>
+						</div>
+						<div class="fr">
+							<button id="all" class="btn btn-warning">选择全部</button>
+							<button class="btn btn-warning">下架产品</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ui-table">
+					<div class="ui-table-header radius">
+						<span class="col-md-1">
+							<i id="selectAll" class="iconfont icon-weixuan"></i>
+						</span>
+						<span class="col-md-1">上架时间</span>
+						<span class="col-md-2">产品名称</span>
+						<span class="col-md-1">产品分类</span>
+						<span class="col-md-1">所属公司</span>
+						<span class="col-md-1">产品/方案佣金</span>
+						<span class="col-md-1">产品/方案销量</span>
+						<span class="col-md-1">件均保费</span>
+						<span class="col-md-1">保费区间</span>
+						<span class="col-md-2 col-one">操作</span>
+					</div>
+					<div class="ui-table-body">
+						<ul>
+							<li class="ui-table-tr">
+								<div class="col-md-1">
+									<label>
+										<i class="iconfont icon-weixuan"></i>
+										<input hidden type="checkbox" />
+									</label>
+								</div>
+								<div class="col-md-1">2017-09-22</div>
+								<div class="col-md-2 color-default">测试产品一…</div>
+								<div class="col-md-1">意外险</div>
+								<div class="col-md-1">泰康人寿</div>
+								<div class="col-md-1">5000<i class="percent">(20%)</i></div>
+								<div class="col-md-1">742</div>
+								<div class="col-md-1">3000</div>
+								<div class="col-md-1">20万-30万</div>
+								<div class="col-md-2 text-right">
+									<a class="btn btn-primary" href="html/product/product_details_on.html">查看详情</a>
+								</div>
+							</li>
+							<li class="ui-table-tr">
+								<div class="col-md-1">
+									<label>
+										<i class="iconfont icon-weixuan"></i>
+										<input hidden type="checkbox" />
+									</label>
+								</div>
+								<div class="col-md-1">2017-09-22</div>
+								<div class="col-md-2 color-default">测试产品一…</div>
+								<div class="col-md-1">意外险</div>
+								<div class="col-md-1">泰康人寿</div>
+								<div class="col-md-1">5000<i class="percent">(20%)</i></div>
+								<div class="col-md-1">742</div>
+								<div class="col-md-1">3000</div>
+								<div class="col-md-1">20万-30万</div>
+								<div class="col-md-2 text-right">
+									<a class="btn btn-primary" href="html/product/product_details_on.html">查看详情</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row text-center">
+				<ul class="pagination">
+                    <li class="disabled"><span>«</span></li>
+                    <li data-page='1'><a>1</a></li>
+                    <li data-page='2'><a>2</a></li>
+                    <li class="active"  data-page='3'><a>3</a></li>
+                    <li data-page='4'><a>4</a></li>
+                    <li data-page='5'><a>5</a></li>
+                    <li><a>...</a></li>
+                    <li data-page='10'><a>10</a></li>
+            		<li><span rel="next">»</span></li>
+            	</ul>
+			</div>
+			
+		</div>
+		
+		<script src="js/lib/jquery-1.11.3.min.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/lib/bootstrap-datetimepicker.min.js"></script>
+		<script src="js/lib/bootstrap-datetimepicker.zh-CN.js"></script>
+		<script src="js/common_backend.js"></script>
+		<script>
+			
+			new CheckTable('.ui-table');
+			
+			$('#all').click(function(){
+				$('#selectAll').removeClass('icon-weixuan').addClass('icon-xuanze');
+				$('.ui-table-tr .iconfont').trigger('click');
+				if($('#selectAll').hasClass('icon-xuanze')){
+					$(this).text('取消选择');
+				}else{
+					$(this).text('选择全部');
+				}
+			});
+			
+			
+			
+			setPage();
+			
+			$('.form_date').datetimepicker({
+		        language:  'zh-CN',
+		        format: 'yyyy-m-d',
+		        todayBtn:  1,
+				autoclose: 1,
+				todayHighlight: true,
+				minView: 2,
+				endDate: new Date()
+		    }).on('changeDate',function(){
+		    	console.log('00');
+		    	console.log($('#date').val());
+		    });
+
+			
+		</script>
+	</body>
+
+</html>

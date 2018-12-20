@@ -1,0 +1,29 @@
+.chart-wrapper,
+.info-wrapper {
+  height: 290px;
+}
+.info-wrapper {
+  padding: 20px 40px;
+}
+.info-wrapper .title {
+  font-size: 16px;
+  color: #00a2ff;
+  font-weight: bold;
+}
+.info-wrapper .info-item .name {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #aaabb6;
+}
+.info-wrapper .info-item .price {
+  font-size: 30px;
+  vertical-align: top;
+}
+.info-wrapper .info-item:nth-of-type(1):after {
+  display: block;
+  content: '';
+  margin: 26px auto;
+  width: 80%;
+  height: 0;
+  border-bottom: 1px solid #374068;
+}

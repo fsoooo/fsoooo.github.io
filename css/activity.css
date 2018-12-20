@@ -1,0 +1,53 @@
+.chart-wrapper {
+  height: 248px;
+}
+.chart-header .form-control {
+  margin-right: 4%!important;
+}
+#setTask {
+  width: 120px;
+}
+#addTask .modal-dialog {
+  width: 400px;
+}
+#addTask .modal-body {
+  padding: 20px 56px 40px;
+}
+#addTask .modal-body li {
+  margin-bottom: 10px;
+}
+#addTask .modal-body input {
+  width: 108px;
+  padding: 6px;
+  height: 24px;
+  margin-right: 4px;
+  border: 1px solid #ddd;
+}
+#addTask .modal-body .name {
+  display: inline-block;
+  width: 86px;
+  margin-right: 20px;
+  text-align: right;
+}
+#addTask .modal-body .iconfont {
+  font-size: 16px;
+}
+#addTask .form-control {
+  margin-left: -4px;
+  padding: 0;
+  display: inline-block;
+  width: 108px;
+}
+#addTask .checkbox {
+  margin: 0;
+  width: 170px;
+  display: inline-block;
+  vertical-align: top;
+}
+#addTask .checkbox li {
+  display: inline-block;
+  margin-right: 10px;
+}
+#addTask .checkbox label {
+  padding-left: 0;
+}
