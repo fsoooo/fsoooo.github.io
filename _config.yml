@@ -14,7 +14,7 @@ github_repo: "https://github.com/fsoooo/fsoooo.github.io.git" # you code reposit
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "内不欺己，外不欺人，上不欺天。君子所以慎独。"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/fsoooo-headImg.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
