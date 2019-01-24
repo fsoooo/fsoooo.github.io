@@ -23,8 +23,8 @@ RSS: false
 weibo_username:     fsoooo
 zhihu_username:     fsoooo
 github_username:    fsoooo
-facebook_username:  fsoooo
 jianshu_username:   910c6f95a495
+gitee_username: wangslei
 #twitter_username:   fsoooo
 
 
@@ -53,7 +53,7 @@ gems: [jekyll-paginate]
 markdown: kramdown
 highlighter: rouge
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+input: GFM                            # use Github Flavored Markdown !important
 
 
 
@@ -100,17 +100,14 @@ service-worker: true
 
 # Friends
 friends: [
-    {
-        title: "WY",
-        href: "http://fsoooo.github.io"
-    },{
+   {
         title: "简书·fsoooo",
         href: "https://www.jianshu.com/u/910c6f95a495"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "码云·wangslei",
+        href: "https://gitee.com/wangslei"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "Github·fsoooo",
+        href: "https://github.com/fsoooo"
     }
 ]
