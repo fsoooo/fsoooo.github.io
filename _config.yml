@@ -1,111 +1,111 @@
-# Site settings
-title: fsoooo Blog
-SEOTitle: 王石磊的博客 | fsoooo Blog
-header-img: img/home-bg.jpg
-description: "这里是 @fsoooo 王石磊 的个人博客，与你一起发现更大的世界。"
-keyword: "王石磊, wangsl, fsoooo, 四石, @fsoooo, @wangsl, 王石磊的博客, fsoooo Blog, 博客, 个人网站, 互联网"
-url: "https://fsoooo.github.io"
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/fsoooo/fsoooo.github.io.git" # you code repository
+  # Site settings
+  title: fsoooo Blog
+  SEOTitle: 王石磊的博客 | fsoooo Blog
+  header-img: img/home-bg.jpg
+  description: "这里是 @fsoooo 王石磊 的个人博客，与你一起发现更大的世界。"
+  keyword: "王石磊, wangsl, fsoooo, 四石, @fsoooo, @wangsl, 王石磊的博客, fsoooo Blog, 博客, 个人网站, 互联网"
+  url: "https://fsoooo.github.io"
+  baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+  github_repo: "https://github.com/fsoooo/fsoooo.github.io.git" # you code repository
 
 
 
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "内不欺己，外不欺人，上不欺天。君子所以慎独。"
-sidebar-avatar: /img/fsoooo-headImg.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+  # Sidebar settings
+  sidebar: true                           # whether or not using Sidebar.
+  sidebar-about-description: "内不欺己，外不欺人，上不欺天。君子所以慎独。"
+  sidebar-avatar: /img/fsoooo-headImg.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
-# SNS settings
-RSS: false
-weibo_username:     fsoooo
-zhihu_username:     fsoooo
-#github_username:    fsoooo
-jianshu_username:   910c6f95a495
-#gitee_username: wangslei
-twitter_username:   fstoooo #https://twitter.com/fstoooo
-#instagram_username:   fstoooo  #https://www.instagram.com/fstoooo
-#facebook_username:   fstoooo   #https://www.facebook.com/fsoooo
-
-
-
-
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+  # SNS settings
+  RSS: false
+  weibo_username:     fsoooo
+  zhihu_username:     fsoooo
+  #github_username:    fsoooo
+  jianshu_username:   910c6f95a495
+  #gitee_username: wangslei
+  twitter_username:   fstoooo #https://twitter.com/fstoooo
+  #instagram_username:   fstoooo  #https://www.instagram.com/fstoooo
+  #facebook_username:   fstoooo   #https://www.facebook.com/fsoooo
 
 
 
 
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-highlighter: rouge
-kramdown:
-input: GFM                            # use Github Flavored Markdown !important
+  # Build settings
+  # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+  permalink: pretty
+  paginate: 10
+  exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+  anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
 
-# 评论系统
-#Disqus（https://disqus.com/）
-#disqus_username: fsoooo
-
-# Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: 503237b2da02e8f7caa1                            #生成的clientID
-  clientSecret: d36c48d7dbb7311055708c4e85df5d8caa17a66e    #生成的clientSecret
-  repo: fsoooo.github.io    #仓库名称
-  owner: fsoooo    #github用户名
-  admin: fsoooo
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
-
-# 统计
-
-# Analytics settings
-# Baidu Analytics
-#ba_track_id: b50bf2b12b5338a1845e33832976fd68
-
-# Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+  # Gems
+  # from PR#40, to support local preview for Jekyll 3.0
+  gems: [jekyll-paginate]
 
 
 
 
-
-# Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
+  # Markdown settings
+  # replace redcarpet to kramdown,
+  # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+  # document: http://jekyllrb.com/docs/configuration/#kramdown
+  markdown: kramdown
+  highlighter: rouge
+  kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
 
 
 
-# Friends
-friends: [
-   {
-        title: "简书·fsoooo",
-        href: "https://www.jianshu.com/u/910c6f95a495"
-    },{
-        title: "码云·wangslei",
-        href: "https://gitee.com/wangslei"
-    }
-]
+  # 评论系统
+  #Disqus（https://disqus.com/）
+  #disqus_username: fsoooo
+
+  # Gitalk
+  gitalk:
+    enable: true    #是否开启Gitalk评论
+    clientID: 503237b2da02e8f7caa1                            #生成的clientID
+    clientSecret: d36c48d7dbb7311055708c4e85df5d8caa17a66e    #生成的clientSecret
+    repo: fsoooo.github.io    #仓库名称
+    owner: fsoooo    #github用户名
+    admin: fsoooo
+    distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
+  # 统计
+
+  # Analytics settings
+  # Baidu Analytics
+  #ba_track_id: b50bf2b12b5338a1845e33832976fd68
+
+  # Google Analytics
+  ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+  ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+
+
+
+
+
+  # Featured Tags
+  featured-tags: true                     # 是否使用首页标签
+  featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
+
+
+
+  # Progressive Web Apps
+  chrome-tab-theme-color: "#000000"
+  service-worker: true
+
+
+
+  # Friends
+  friends: [
+     {
+          title: "简书·fsoooo",
+          href: "https://www.jianshu.com/u/910c6f95a495"
+      },{
+          title: "码云·wangslei",
+          href: "https://gitee.com/wangslei"
+      }
+  ]
