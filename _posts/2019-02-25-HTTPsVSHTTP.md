@@ -1,3 +1,15 @@
+---
+layout: post
+title: "HTTPS vs HTTP"
+date: 2019-03-24 
+author: "fsoooo"
+catalog: true
+tags:
+  - Https
+  - Http
+  - 网络协议
+---
+
 #### 一、HTTP定义
 
 HTTP协议（HyperTextTransferProtocol，超文本传输协议）是用于从WWW服务器传输超文本到本地浏览器的传输协议。

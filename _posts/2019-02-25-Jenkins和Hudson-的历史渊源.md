@@ -1,7 +1,17 @@
+---
+layout: post
+title: "Jenkins和Hudson的历史渊源"
+date: 2019-03-25 
+author: "fsoooo"
+catalog: true
+tags:
+  - Jenkins
+  - Hudson
+  - 持续集成
+---
 
 ![img](http://upload-images.jianshu.io/upload_images/6943526-a635e6452e9f5330?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### Jenkins和Hudson的历史渊源
 
 Jenkins的前身是Hudson，采用JAVA编写的持续集成开源工具。
 
