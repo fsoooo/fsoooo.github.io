@@ -3,7 +3,6 @@ layout: post
 catalog: true
 tags:
   - 工具
-  - Idea
   - 编程
 ---
 
