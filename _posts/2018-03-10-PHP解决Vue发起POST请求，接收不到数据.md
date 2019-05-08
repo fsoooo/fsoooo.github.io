@@ -1,3 +1,10 @@
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - Vue
+---
 刚开始使用vue对接后端接口时，PHP后端一直接受不到前端传的参数。找了很久，发现vue请求接口传参的形式是流的方式，因此后端要在接受数据的方面做一些改变。这里我用的是PHP原生方法file_get_contents。
 ####file_get_contents("php://input")的使用方法
 php://input 是个可以访问请求的原始数据的只读流。 POST 请求的情况下，最好使用 php://input 来代替 ，因为它不依赖于特定的 php.ini 指令。 

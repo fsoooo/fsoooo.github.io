@@ -1,3 +1,11 @@
+---
+layout: post
+catalog: true
+tags:
+  - Shell
+  - Linux
+---
+
 > 学习Shell的同时，我们先来简单的认识一下操作系统。
 
 ## 一 从认识操作系统开始

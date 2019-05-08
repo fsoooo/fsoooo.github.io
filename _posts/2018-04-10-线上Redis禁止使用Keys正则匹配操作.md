@@ -1,3 +1,10 @@
+---
+layout: post
+catalog: true
+tags:
+  - 程序员
+  - Redis
+---
 ![](https://upload-images.jianshu.io/upload_images/6943526-e385e07ca946f8e0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 

@@ -1,3 +1,9 @@
+---
+layout: post
+catalog: true
+tags:
+  - Vue
+---
 #  Vue学习笔记-遍历el-checkout
 
 ```vue

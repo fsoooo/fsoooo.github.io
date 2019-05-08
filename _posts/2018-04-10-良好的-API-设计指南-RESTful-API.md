@@ -1,3 +1,10 @@
+---
+layout: post
+catalog: true
+tags:
+  - 编程
+---
+
 要说RESTful首先来说说REST – REpresentational State Transfer （表述性状态传递）
 
 > 表述性状态转移是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是RESTful。需要注意的是，REST是设计风格而不是标准。

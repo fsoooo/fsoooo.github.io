@@ -1,4 +1,10 @@
-
+---
+layout: post
+catalog: true
+tags:
+  - 转载
+  - 技术
+---
 > 本文转载自：Hollis 作者： Hollis
 
 在阿里巴巴Java开发手册中，有这样一条规定：

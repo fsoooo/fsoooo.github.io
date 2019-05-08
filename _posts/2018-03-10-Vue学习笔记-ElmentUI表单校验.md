@@ -1,3 +1,9 @@
+---
+layout: post
+catalog: true
+tags:
+  - Vue
+---
 Elment-UI 的 Form 组件提供了表单验证的功能：
 
 1.将 Form-Item 的 `prop` 属性设置为需校验的字段名

@@ -1,3 +1,10 @@
+---
+layout: post
+catalog: true
+tags:
+  - Docker
+---
+
 # 什么是 Docker
 Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司内部的一个业余项目。它基于 Google 公司推出的 Go 语言实现。项目后来加入了 Linux 基金会，遵从了 Apache 2.0 协议，项目代码在[GitHub](https://github.com/docker/docker) 上进行维护。
 ![image](http://upload-images.jianshu.io/upload_images/6943526-feac1c47d1ed20b0?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

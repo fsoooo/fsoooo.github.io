@@ -1,3 +1,11 @@
+---
+layout: post
+catalog: true
+tags:
+  - Java
+  - Python
+---
+
 ![pythonVSjava.jpg](https://upload-images.jianshu.io/upload_images/6943526-3d6572ac3d7450d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 

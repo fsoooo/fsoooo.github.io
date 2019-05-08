@@ -1,3 +1,11 @@
+---
+layout: post
+catalog: true
+tags:
+  - Redis
+  - 锁
+---
+
 #redis加锁的几种实现
 
 ## 1. redis加锁分类

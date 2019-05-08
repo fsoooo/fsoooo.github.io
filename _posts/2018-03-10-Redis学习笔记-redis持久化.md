@@ -1,3 +1,9 @@
+---
+layout: post
+catalog: true
+tags:
+  - Redis
+---
 # redis持久化的几种方式
 
 Redis是一种**key-value**数据库。它跟memcached类似，不过数据可以持久化，而且支持的数据类型很丰富：string（字符串），hash（哈希），list（列表），set（集合）及zset(sorted set：有序集合)。支持在服务器端计算集合的并，交和补集(difference)等，还支持多种排序功能。所以Redis也可以被看成是一个**数据结构**服务器。

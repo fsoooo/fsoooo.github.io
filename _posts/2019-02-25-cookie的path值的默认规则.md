@@ -1,3 +1,9 @@
+---
+layout: post
+catalog: true
+tags:
+  - Cookie
+---
 今天遇到一个Cookie的问题，cookie的path不是    `'/'`,导致一些页面不能共享Cookie。之前没有遇到过这个问题，今天就查了查。
 
 在项目中有时需要用cookie来保存用户信息，很多时候我们都只设置了cookie的name、value和maxAge，而没有去管path。 

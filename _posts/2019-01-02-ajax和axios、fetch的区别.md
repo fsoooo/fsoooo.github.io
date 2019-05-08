@@ -1,3 +1,11 @@
+---
+layout: post
+catalog: true
+tags:
+  - 前端
+  - AJAX
+---
+
 **1.jQuery ajax**
 ```
 $.ajax({

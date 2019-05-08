@@ -1,4 +1,10 @@
-
+---
+layout: post
+catalog: true
+tags:
+  - Redis
+  - 事务
+---
 
 ### MULTI 、EXEC 、DISCARD 和WATCH 是 Redis 事务的基础
 

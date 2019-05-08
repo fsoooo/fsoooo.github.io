@@ -1,3 +1,10 @@
+---
+layout: post
+catalog: true
+tags:
+  - GitHub
+---
+
 之前在简书上写了一篇 [项目迁移：从码云迁移到Github](https://www.jianshu.com/p/196d6f5f73a5)，今天早上过来发现几个简友给我留言：
 ![评论.png](https://upload-images.jianshu.io/upload_images/6943526-84eef4c003eb0c04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 之前我对git了解的太浅，走的是野路子，可能会误导大家，现在对以前的做法做出矫正。

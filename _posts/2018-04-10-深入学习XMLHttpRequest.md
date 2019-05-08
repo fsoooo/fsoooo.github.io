@@ -1,3 +1,11 @@
+---
+layout: post
+catalog: true
+tags:
+  - 前端
+  - AJAX
+---
+
 #你真的会使用XMLHttpRequest吗？
  
 **转载自 [segmentfault](https://segmentfault.com)  平台  [ruoyiqing](https://segmentfault.com/a/1190000004322487) ,侵删！！！**
