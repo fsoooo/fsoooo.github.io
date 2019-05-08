@@ -1,3 +1,11 @@
+---
+layout: post
+catalog: true
+tags:
+  - MySQL
+  - 编程
+---
+
 ## MySQL之Where和Having的区别
 
 对于使用where和having，相信很多人都有过困扰，今天就来讲一下我对where和having的认识：

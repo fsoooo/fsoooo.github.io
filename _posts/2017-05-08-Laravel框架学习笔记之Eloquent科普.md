@@ -1,3 +1,12 @@
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - Laravel
+  - Eloquent
+  - 编程
+---
 # 什么是Eloquent
 
 ​	Eloquent 是作为 Laravel实体关系映射框架(ORM)的一个名称，是一个用于关系型数据库实体关系映射的组件,laravel内置的,可以以操作对象的方式操作数据库的数据变更和查询，其命名空间下包括 Model、Relationship、Builder 等类的实现，这些类提供数据到对象的映射，同时提供模型间关系（Relationship）的支持。ORM 的出现是为了帮我们把对数据库的操作变得更加地方便。

@@ -1,3 +1,10 @@
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - OpenSSL
+---
 PHP 在进入7.x 时代后，默认就不再附带 **mcrypt** 扩展，**mcrypt** 将被 **openssl_*** 一族函数所替代。所以，对于 PHPer 来说，有必要学习一下 PHP 的 OpenSSL 扩展。
 
 本文就先从 OpenSSL 扩展中的对称加密说起。后面会陆续更多非对称加密、数字签名、数字证书等函数的讲解。

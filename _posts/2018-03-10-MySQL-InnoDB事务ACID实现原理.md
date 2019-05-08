@@ -1,3 +1,12 @@
+---
+layout: post
+catalog: true
+tags:
+  - MySQL
+  - 事务
+  - InnoDB
+---
+
 这一篇主要讲一下InnoDB中的事务到底是如何实现ACID的
 
 - 原子性（atomicity）

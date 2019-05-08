@@ -1,3 +1,12 @@
+---
+layout: post
+catalog: true
+tags:
+  - Laravel
+  - Redis
+  - 编程
+---
+
 ### 入门级操作
 
 普通 set / get 操作； `set`操作，如果键名存在，则会覆盖原有的值；

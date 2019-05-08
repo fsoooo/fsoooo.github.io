@@ -1,3 +1,11 @@
+---
+layout: post
+catalog: true
+tags:
+  - Nginx
+  - 编程
+---
+
 最近公司要上线HTTPS,需要把之前的HTTP访问强制跳转到HTTPS。
 
 ### Nginx安装注意事项

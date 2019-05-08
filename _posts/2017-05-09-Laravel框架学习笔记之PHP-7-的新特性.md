@@ -1,4 +1,11 @@
-
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - Laravel
+  - 编程
+---
 
 PHP7是最新出来的一个新的PHP的一个版本，而且新增了一些新的版本特性，下面我们来介绍一下：
 

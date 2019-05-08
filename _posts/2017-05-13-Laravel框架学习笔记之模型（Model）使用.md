@@ -1,3 +1,13 @@
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - Laravel
+  - 模型
+  - 编程
+---
+
 ```php
 一.定义模型
 1.命令

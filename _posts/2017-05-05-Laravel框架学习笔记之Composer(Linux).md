@@ -1,4 +1,12 @@
-
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - Laravel
+  - Composer
+  - 编程
+---
 第一步 composer 安装 
 执行命令
 

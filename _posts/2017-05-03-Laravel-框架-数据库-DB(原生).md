@@ -1,3 +1,13 @@
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - Laravel
+  - DB
+  - 编程
+---
+
 我们使用laravel框架进行开发时，有时需要运行原生 的SQL来进行数据处理。laravelde DB 门面为每种操作提供了相应方法：select, update, insert, delete 和 statement。
 **Select 查询**
 运行一个最基本的查询，可以使用 DB 门面的 select 方法：

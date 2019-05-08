@@ -1,3 +1,14 @@
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - Laravel
+  - Envory
+  - 远程
+  - 编程
+---
+
 ## 前言
 
 最近公司开发框架由Thinkphp换成了Laravel，每次项目更新上线，都会先更新代码，再执行命令来确保项目运行：

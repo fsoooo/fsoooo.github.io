@@ -1,4 +1,12 @@
-
+---
+layout: post
+catalog: true
+tags:
+  - PHP
+  - Laravel
+  - ORM
+  - 编程
+---
 
 ## 什么是关联关系
 

@@ -1,3 +1,12 @@
+---
+layout: post
+catalog: true
+tags:
+  - 工具
+  - Idea
+  - 编程
+---
+
 ```
 1. F9：恢复程序
 2. Alt+F10：显示执行断点

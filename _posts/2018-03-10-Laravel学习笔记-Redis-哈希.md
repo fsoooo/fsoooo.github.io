@@ -1,3 +1,13 @@
+---
+layout: post
+catalog: true
+tags:
+  - Laravel
+  - Redis
+  - Hash
+  - 编程
+---
+
 ## Redis 哈希(Hash)
 
 Redis hash 是一个string类型的field和value的映射表，hash特别适合用于存储对象。

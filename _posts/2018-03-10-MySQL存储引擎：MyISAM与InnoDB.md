@@ -1,3 +1,12 @@
+---
+layout: post
+catalog: true
+tags:
+  - MySQL
+  - InnoDb
+  - MyISAM
+---
+
 MyISAM：默认表类型，它是基于传统的ISAM类型，ISAM是 `Indexed Sequential Access Method (有索引的顺序访问方法)` 的缩写，它是存储记录和文件的标准方法。**不是事务安全的，而且不支持外键，如果执行大量的select，insert MyISAM比较适合。**
 
 
