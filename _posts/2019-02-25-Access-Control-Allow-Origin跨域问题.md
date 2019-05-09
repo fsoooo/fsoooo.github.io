@@ -3,6 +3,8 @@ layout: post
 catalog: true
 tags:
   - 前端
+  - 跨域
+  - 系统安全
 ---
 ## 1.浏览器的同源安全策略
 

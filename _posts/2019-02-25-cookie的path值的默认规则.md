@@ -3,6 +3,7 @@ layout: post
 catalog: true
 tags:
   - Cookie
+  - 前端
 ---
 今天遇到一个Cookie的问题，cookie的path不是    `'/'`,导致一些页面不能共享Cookie。之前没有遇到过这个问题，今天就查了查。
 
