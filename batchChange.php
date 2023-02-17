@@ -42,9 +42,15 @@ for($i=0;$i<$dir_arr_count;$i++){
 
     $file_new_name = $file_arr[0].$file_arr[1];
 
-    $time = strtotime('2021-07-02');
+    $date = substr($file_new_name, 0 ,10);
 
-    $time = date('Y-m-d',$time+$i*24*3600);
+    $file_new_name = substr($file_new_name, 11 );
+
+    //echo $date.'\n'.$file_new_name.'\n';
+
+    $time = strtotime('2023-02-20');
+
+    $time = date('Y-m-d',$time-$i*24*3600);
 
     rename($file_name,$dir_arr_0_0.$time.'-'.$file_new_name);
   }
