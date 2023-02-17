@@ -5,8 +5,7 @@ env:
 install: 
   - gem install jekyll
   - gem install jekyll-paginate
-  - gem install -n /usr/local/bin jekyll
-script: 
+script:
   - jekyll build
 after_success:
   - bash <(curl -s https://codecov.io/bash)
