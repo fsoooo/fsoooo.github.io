@@ -39,7 +39,33 @@ Github Pages 官方支持 Jekyll，只需上传 Jekyll 网站源文件到与 Git
 ├── img
 └── index.html
 ```
+```
 
+├── _data            # 存放网站数据，使用.yml，.yaml，.json或.csv格式和扩展名可以通过site.data访问它们
+├── _includes        # 存放html模块，可以在多个html页面进行引用
+├── _layouts         # 布局文件
+├── _posts           # 用于存放博客文章
+├── _scripts
+├── _site           # 项目构建完成之后所生成的静态文件存放于此，可将其到.gitignore文件中
+│   └── assets      # 生成的静态网页的CSS 文件、JS 文件以及图片文件
+├── _plugins        # 插件
+├── assets          #静态资源文件
+├── tabs
+├── .travis.yml      # 删除
+├── .github          # 删除
+├── .gitignore
+├── 404.html
+├── Gemfile          # 存放项目所依赖的 Ruby gems
+├── LICENSE
+├── README.md
+├── _config.yml       # 项目的配置文件，项目的全局配置在此
+├── tools           
+├── docs
+├── feed.xml
+├── index.html
+├── robots.txt
+└── sitemap.xml
+```
 很复杂看不懂是不是，不要紧，你只要记住其中几个OK了
 
 - `_config.yml` 全局配置文件
