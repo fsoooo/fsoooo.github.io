@@ -5,6 +5,7 @@ env:
 install: 
   - gem install jekyll
   - gem install jekyll-paginate
+  - gem install -n /usr/local/bin jekyll
 script: 
   - jekyll build
 after_success:
