@@ -48,7 +48,7 @@ for($i=0;$i<$dir_arr_count;$i++){
 
     //echo $date.'\n'.$file_new_name.'\n';
 
-    $time = strtotime('2023-02-20');
+    $time = strtotime('2023-5-20');
 
     $time = date('Y-m-d',$time-$i*24*3600);
 
