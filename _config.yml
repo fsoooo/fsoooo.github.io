@@ -1,7 +1,7 @@
 # Site settings
 title: fsoooo Blog
 SEOTitle: 王石磊的博客 | fsoooo Blog
-header-img: img/home-bg.jpg
+header-img: img/about-bg.jpg
 description: "这里是 @fsoooo 王石磊 的个人博客，与你一起发现更大的世界。"
 keyword: "王石磊, wangsl, fsoooo, 四石, @fsoooo, @wangsl, 王石磊的博客, fsoooo Blog, 博客, 个人网站, 互联网"
 url: "https://fsoooo.github.io"
@@ -64,7 +64,7 @@ input: GFM                            # use Github Flavored Markdown !important
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: 503237b2da02e8f7caa1                            #生成的clientID
   clientSecret: d36c48d7dbb7311055708c4e85df5d8caa17a66e    #生成的clientSecret
   repo: fsoooo.github.io    #仓库名称
